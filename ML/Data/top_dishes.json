@@ -1,0 +1,22 @@
+[
+  {
+    "order_count":"Tea",
+    "count":249
+  },
+  {
+    "order_count":"Paneer Roll",
+    "count":192
+  },
+  {
+    "order_count":"Veg Thali",
+    "count":146
+  },
+  {
+    "order_count":"Samosa",
+    "count":115
+  },
+  {
+    "order_count":"Burger",
+    "count":104
+  }
+]
