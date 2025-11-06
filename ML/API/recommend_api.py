@@ -1,63 +1,114 @@
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
-import pandas as pd
-from datetime import datetime, timedelta
 from pathlib import Path
+from typing import Optional
+import pandas as pd
+from datetime import timedelta
 
-app = FastAPI(title="Canteen Recommendation API", version="1.0.0")
+app = FastAPI(title="Canteen Recommendation API", version="1.1.0")
 
-# --- CORS (adjust for your frontend domain) ---
+# CORS — allow frontend to call this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],          # replace "*" with your frontend origin in prod
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# --- Data loading (repo-relative, safe) ---
-BASE_DIR = Path(__file__).resolve().parent
-DATA_PATH = (BASE_DIR / ".." / "Data" / "raw" / "mock_canteen_orders.csv").resolve()
+# Repo-relative paths
+BASE_DIR = Path(__file__).resolve().parent      # ML/API
+ML_DIR = BASE_DIR.parent                        # ML
+DATA_PATH = (ML_DIR / "Data" / "raw" / "mock_canteen_orders.csv").resolve()
+MODEL_PATH = (ML_DIR / "Model" / "trained_model.pkl").resolve()
 
-def load_orders():
+
+# Load orders CSV
+def load_orders() -> pd.DataFrame:
     df = pd.read_csv(DATA_PATH)
-    # parse timestamp safely if present
     if "timestamp" in df.columns:
         df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
     return df
 
-# --- Core logic: popularity recommender ---
-def get_popular(df: pd.DataFrame, top_n: int = 5, days: int | None = None):
-    if days and "timestamp" in df.columns and pd.api.types.is_datetime64_any_dtype(df["timestamp"]):
+
+# Popularity-based recommender
+def get_popular(df: pd.DataFrame, top_n: int = 5, days: Optional[int] = None):
+    if days and "timestamp" in df.columns:
         cutoff = pd.Timestamp.utcnow() - timedelta(days=days)
         df = df[df["timestamp"] >= cutoff]
+
     counts = df["item_name"].value_counts().reset_index()
     counts.columns = ["item_name", "order_count"]
     return counts.head(top_n).to_dict(orient="records")
 
-@app.get("/", tags=["health"])
-def root():
-    return {"ok": True, "service": "canteen-recommendation", "version": "1.0.0"}
 
-@app.get("/recommend", tags=["recommendations"])
+# Try personalized (Phase 2)
+def try_personalized(user_id: str, top_n: int = 5):
+    try:
+        import joblib
+        data = joblib.load(MODEL_PATH)
+
+        pivot = data["pivot"]
+        item_sim = data["item_sim"]
+
+        if user_id not in pivot.index:
+            return None  # cold start fallback
+
+        user_vec = pivot.loc[user_id]
+        scores = (item_sim * user_vec).sum(axis=1).sort_values(ascending=False)
+
+        purchased = set(pivot.columns[user_vec > 0])
+        recs = [i for i in scores.index if i not in purchased][:top_n]
+
+        return [{"item_name": item, "source": "personalized"} for item in recs]
+
+    except Exception:
+        return None
+
+
+# ROUTES ----------------------------------------------------------
+
+@app.get("/")
+def health():
+    return {"ok": True, "service": "canteen-recommendation-api"}
+
+
+@app.get("/recommend")
 def recommend(
     top_n: int = Query(5, ge=1, le=50),
-    window_days: int | None = Query(None, ge=1, description="If set, use only recent N days"),
+    window_days: Optional[int] = Query(None, ge=1),
 ):
-    """
-    Returns top-N most-ordered dishes (optionally within a recent time window).
-    Response format:
-    {
-      "top_n": 5,
-      "window_days": 7,
-      "recommendations": [{"item_name":"Tea","order_count":132}, ...]
+    df = load_orders()
+    recs = get_popular(df, top_n=top_n, days=window_days)
+    return {
+        "mode": "popular",
+        "top_n": top_n,
+        "window_days": window_days,
+        "recommendations": recs,
     }
-    """
-    try:
-        df = load_orders()
-        if "item_name" not in df.columns:
-            return {"error": "item_name column missing in dataset"}
-        recs = get_popular(df, top_n=top_n, days=window_days)
-        return {"top_n": top_n, "window_days": window_days, "recommendations": recs}
-    except Exception as e:
-        return {"error": str(e)}
+
+
+@app.get("/recommend/user/{user_id}")
+def recommend_user(
+    user_id: str,
+    top_n: int = Query(5, ge=1, le=50),
+):
+    # Try personalized
+    recs = try_personalized(user_id, top_n=top_n)
+    if recs:
+        return {
+            "mode": "personalized",
+            "user_id": user_id,
+            "top_n": top_n,
+            "recommendations": recs,
+        }
+
+    # Fallback
+    df = load_orders()
+    fallback = get_popular(df, top_n=top_n)
+    return {
+        "mode": "popular-fallback",
+        "user_id": user_id,
+        "top_n": top_n,
+        "recommendations": fallback,
+    }
