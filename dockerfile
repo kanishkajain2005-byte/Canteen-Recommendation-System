@@ -1,27 +1,17 @@
-# Stage 1: Build Stage (Uses a more feature-rich image for package compilation if needed)
-# Using a 'slim' base image is recommended for Python as it's much smaller than the default
-FROM python:3.11-slim as base
+# 1. Use an official Python image
+FROM python:3.10-slim
 
-# Set the working directory for all subsequent instructions
+# 2. Set the working directory in the container
 WORKDIR /app
 
-# Copy the dependency file first to take advantage of Docker layer caching.
-# If requirements.txt doesn't change, this and the next step are skipped on rebuilds.
-COPY requirements.txt requirements.txt
+# 3. Copy project files into the container
+COPY . /app
 
-# Install Python dependencies.
-# --no-cache-dir reduces image size by not storing the pip cache.
+# 4. Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of your application code and trained model file(s)
-# The .dockerignore file should exclude unnecessary files like .git, venv, etc.
-COPY . .
-
-# EXPOSE the port your application will run on (e.g., 8000 for a FastAPI/Flask API)
-# This is documentation and doesn't actually publish the port.
+# 5. Expose the port that your FastAPI runs on
 EXPOSE 8000
 
-# Specify the command to run the application when the container starts.
-# Use the exec form (array syntax) for better performance and signal handling.
-# Replace 'app.py' with your primary script name.
-CMD ["uvicorn", "recommend_api:app", "--host", "0.0.0.0", "--port", "8000"]
+# 6. Start the server
+CMD ["uvicorn", "ML.API.recommend_api:app", "--host", "0.0.0.0", "--port", "8000"]

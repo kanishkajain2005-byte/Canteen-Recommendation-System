@@ -28,18 +28,52 @@ def load_orders() -> pd.DataFrame:
     df = pd.read_csv(DATA_PATH)
     if "timestamp" in df.columns:
         df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
+        df = df.dropna(subset=["timestamp"])   # drop invalid timestamps
     return df
 
-
-# Popularity-based recommender
 def get_popular(df: pd.DataFrame, top_n: int = 5, days: Optional[int] = None):
-    if days and "timestamp" in df.columns:
-        cutoff = pd.Timestamp.utcnow() - timedelta(days=days)
+    if days and "timestamp" in df.columns and pd.api.types.is_datetime64_any_dtype(df["timestamp"]):
+        
+        # ✅ Create timezone-naive cutoff
+        cutoff = (pd.Timestamp.utcnow() - timedelta(days=days)).tz_localize(None)
+
+        # ✅ Ensure timestamps are valid & tz-naive
+        df = df[df["timestamp"].notna()]
+        df["timestamp"] = df["timestamp"].dt.tz_localize(None)
+
+        # ✅ Safe comparison
         df = df[df["timestamp"] >= cutoff]
 
     counts = df["item_name"].value_counts().reset_index()
     counts.columns = ["item_name", "order_count"]
+
     return counts.head(top_n).to_dict(orient="records")
+
+
+
+
+
+
+# Popularity-based recommender
+def get_popular(df: pd.DataFrame, top_n: int = 5, days: Optional[int] = None):
+    if days and "timestamp" in df.columns and pd.api.types.is_datetime64_any_dtype(df["timestamp"]):
+
+        # ✅ make sure timestamps are timezone-naive
+        if df["timestamp"].dt.tz is not None:
+            df["timestamp"] = df["timestamp"].dt.tz_localize(None)
+
+        # ✅ cutoff must be timezone-naive too
+        cutoff = pd.Timestamp.utcnow().tz_localize(None) - timedelta(days=days)
+
+        # ✅ safe filtering
+        df = df[df["timestamp"] >= cutoff]
+
+    counts = df["item_name"].value_counts().reset_index()
+    counts.columns = ["item_name", "order_count"]
+
+    return counts.head(top_n).to_dict(orient="records")
+
+
 
 
 # Try personalized (Phase 2)
