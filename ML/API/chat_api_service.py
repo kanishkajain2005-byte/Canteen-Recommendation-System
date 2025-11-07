@@ -117,6 +117,4 @@ def home():
     return {"message": "Conversational Chat API is running. Go to /docs to test the /chat endpoint."}
 
 
-if __name__ == "__main__":
-    
-    uvicorn.run("chat_api_service:app", host="127.0.0.1", port=8001, reload=True)
+
