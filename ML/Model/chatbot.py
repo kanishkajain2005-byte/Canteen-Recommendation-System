@@ -3,10 +3,6 @@ import pandas as pd
 import joblib
 from pathlib import Path
 
-# --- Configuration (Must match your training file paths) ---
-
-# Get the path to the directory containing the 'Model' folder
-# NOTE: This assumes this script is run from the project root or the same level as the 'ML' directory
 ML_DIR = Path(__file__).resolve().parent.parent if Path(__file__).resolve().parent.name == 'ML' else Path(__file__).resolve().parent
 MODEL_PATH = ML_DIR / "Model" / "trained_model.pkl"
 
@@ -37,13 +33,12 @@ def recommend_items(user_id: str, pivot_matrix: pd.DataFrame, item_similarity: p
     # 3. Calculate the total recommendation score for all items
     recommendation_scores = {}
     
-    # Iterate through every item the user HAS ordered
+    
     for ordered_item in ordered_items:
         # Get the similarity scores for this ordered item against ALL other items
         similar_items = item_similarity.loc[ordered_item]
         
-        # Multiply the similarity scores by the user's quantity/rating for the ordered item
-        # and add it to the total recommendation score
+        
         quantity = user_vector[ordered_item]
         weighted_scores = similar_items * quantity
         
