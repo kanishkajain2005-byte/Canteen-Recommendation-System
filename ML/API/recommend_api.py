@@ -57,15 +57,22 @@ def get_popular(df: pd.DataFrame, top_n: int = 5, days: Optional[int] = None):
 # Popularity-based recommender
 def get_popular(df: pd.DataFrame, top_n: int = 5, days: Optional[int] = None):
     if days and "timestamp" in df.columns and pd.api.types.is_datetime64_any_dtype(df["timestamp"]):
-        cutoff = pd.Timestamp.utcnow() - timedelta(days=days)
 
-        df = df[df["timestamp"].notna()]     # ✅ Remove bad timestamps
-        df = df[df["timestamp"] >= cutoff]   # ✅ Safe filtering
+        # ✅ make sure timestamps are timezone-naive
+        if df["timestamp"].dt.tz is not None:
+            df["timestamp"] = df["timestamp"].dt.tz_localize(None)
+
+        # ✅ cutoff must be timezone-naive too
+        cutoff = pd.Timestamp.utcnow().tz_localize(None) - timedelta(days=days)
+
+        # ✅ safe filtering
+        df = df[df["timestamp"] >= cutoff]
 
     counts = df["item_name"].value_counts().reset_index()
     counts.columns = ["item_name", "order_count"]
 
     return counts.head(top_n).to_dict(orient="records")
+
 
 
 
