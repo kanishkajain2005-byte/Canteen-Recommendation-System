@@ -1,4 +1,5 @@
 import os
+import requests
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
@@ -26,7 +27,7 @@ app.add_middleware(
 load_dotenv()
 
 # ---------------------------------------------------------
-# ✅ 2. Canteen Menu (You can edit this anytime)
+# ✅ 2. Canteen Menu (edit anytime)
 # ---------------------------------------------------------
 CANTEEN_MENU = """
 Available items in our University Canteen:
@@ -44,30 +45,29 @@ Available items in our University Canteen:
 """
 
 SYSTEM_PROMPT = f"""
-You are the official AI assistant for the College Canteen.
+You are the AI assistant for the College Canteen.
 
 Your rules:
-1. You ONLY use the following menu and nothing outside it:
+1. Only use the following menu:
 {CANTEEN_MENU}
 
-2. If a user asks for recommendations, spicy food, healthy items, popular items, or "what should I eat?", 
-   you MUST respond with this JSON EXACTLY:
+2. If the user asks for recommendations (like spicy items, healthy dishes, what to eat, best options, etc.)
+   respond ONLY with:
    {{"action": "recommend", "query": "<user message>"}}
-   (No additional text.)
 
-3. If a user asks general questions about the canteen (timings, menu items, prices):
-   - Answer briefly and factually based only on the menu above.
+3. For questions about menu, prices, what is available:
+   - Answer briefly using only the menu.
 
-4. If a user asks about a food item NOT in the menu:
-   - Respond: "Sorry, that item is not available in our canteen."
+4. If an item is not in the menu:
+   - Reply: "Sorry, that item is not available in our canteen."
 
-5. Never hallucinate new dishes or ingredients.
+5. Do NOT invent new dishes.
 
-6. Always stay friendly and helpful.
+6. Keep responses friendly.
 """
 
 # ---------------------------------------------------------
-# ✅ 3. Pydantic Models
+# ✅ Pydantic Models
 # ---------------------------------------------------------
 class Part(BaseModel):
     text: str
@@ -85,7 +85,7 @@ class ChatResponse(BaseModel):
     updated_history: List[Content]
 
 # ---------------------------------------------------------
-# ✅ 4. Initialize Gemini Client
+# ✅ Initialize Gemini Client
 # ---------------------------------------------------------
 try:
     gemini_client = genai.Client()
@@ -95,7 +95,26 @@ except Exception as e:
     gemini_client = None
 
 # ---------------------------------------------------------
-# ✅ 5. Chat Endpoint
+# ✅ Helper: Call Recommendation API
+# ---------------------------------------------------------
+def call_recommendation_api(query: str):
+    RECOMMEND_URL = "http://127.0.0.1:8000/recommend/predict"   # LOCAL
+    # For Render:
+    # RECOMMEND_URL = "https://canteen-recommendation-system.onrender.com/recommend/predict"
+
+    try:
+        res = requests.post(RECOMMEND_URL, json={"query": query})
+        if res.status_code != 200:
+            return None
+        
+        return res.json()["recommendations"]
+    
+    except Exception as e:
+        print("Recommendation API error:", e)
+        return None
+
+# ---------------------------------------------------------
+# ✅ 5. Chat Endpoint (Main Logic)
 # ---------------------------------------------------------
 @app.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
@@ -105,29 +124,23 @@ async def chat_endpoint(request: ChatRequest):
 
     conversation = []
 
-    # ✅ Inject system prompt FIRST
+    # ✅ Add system prompt FIRST
     conversation.append(
-        types.Content(
-            role="system",
-            parts=[types.Part.from_text(SYSTEM_PROMPT)]
-        )
+        types.Content(role="system", parts=[types.Part(text=SYSTEM_PROMPT)])
     )
 
-    # ✅ Convert past messages
+    # ✅ Add chat history
     for msg in request.history:
         conversation.append(
             types.Content(
                 role=msg.role,
-                parts=[types.Part.from_text(p.text) for p in msg.parts]
+                parts=[types.Part(text=p.text) for p in msg.parts]
             )
         )
 
     # ✅ Add new user message
     conversation.append(
-        types.Content(
-            role="user",
-            parts=[types.Part.from_text(request.new_message)]
-        )
+        types.Content(role="user", parts=[types.Part(text=request.new_message)])
     )
 
     try:
@@ -137,26 +150,44 @@ async def chat_endpoint(request: ChatRequest):
             contents=conversation
         )
 
-        reply_text = ai_response.text
+        reply_text = ai_response.text.strip()
 
-        # ✅ Update history
+        # ✅ Detect recommendation trigger
+        if reply_text.startswith("{") and reply_text.endswith("}") and '"action": "recommend"' in reply_text:
+            import json
+            parsed = json.loads(reply_text)
+            user_query = parsed["query"]
+
+            # ✅ Call your recommendation ML API
+            recos = call_recommendation_api(user_query)
+
+            if recos:
+                pretty = "\n".join([f"• {item}" for item in recos])
+                final_reply = f"Here are some recommendations based on what you said:\n{pretty}"
+            else:
+                final_reply = "Sorry, I couldn't fetch recommendations right now."
+
+        else:
+            # ✅ Normal answer
+            final_reply = reply_text
+
+        # ✅ Build new history
         updated_history = request.history + [
             Content(role="user", parts=[Part(text=request.new_message)]),
-            Content(role="model", parts=[Part(text=reply_text)])
+            Content(role="model", parts=[Part(text=final_reply)])
         ]
 
         return ChatResponse(
-            reply=reply_text,
+            reply=final_reply,
             updated_history=updated_history
         )
 
     except Exception as e:
         raise HTTPException(500, f"Gemini API error: {e}")
 
-
 # ---------------------------------------------------------
 # ✅ 6. Test endpoint
 # ---------------------------------------------------------
 @app.get("/")
 def home():
-    return {"message": "Canteen Chatbot API running ✅", "docs": "/chat/docs"}
+    return {"message": "Canteen Chatbot API with Recommendations ✅", "docs": "/chat/docs"}
