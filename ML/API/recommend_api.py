@@ -22,21 +22,27 @@ MODEL_PATH = (ML_DIR / "Model" / "trained_model.pkl").resolve()
 
 def load_orders() -> pd.DataFrame:
     df = pd.read_csv(DATA_PATH)
+    df.columns = [c.strip().replace("\ufeff", "").lower() for c in df.columns]
     if "timestamp" in df.columns:
         df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
         df = df.dropna(subset=["timestamp"])
-    df = df.rename(columns={"Food_Item": "item_name"})
     return df
 
+
 def get_popular(df: pd.DataFrame, top_n: int = 5, days: Optional[int] = None):
-    if days and "timestamp" in df.columns and pd.api.types.is_datetime64_any_dtype(df["timestamp"]):
-        if df["timestamp"].dt.tz is not None:
-            df["timestamp"] = df["timestamp"].dt.tz_localize(None)
-        cutoff = pd.Timestamp.utcnow().tz_localize(None) - timedelta(days=days)
-        df = df[df["timestamp"] >= cutoff]
+    df.columns = [c.strip().replace("\ufeff", "").lower() for c in df.columns]
+
+    if days and "timestamp" in df.columns:
+        if pd.api.types.is_datetime64_any_dtype(df["timestamp"]):
+            if df["timestamp"].dt.tz is not None:
+                df["timestamp"] = df["timestamp"].dt.tz_localize(None)
+            cutoff = pd.Timestamp.utcnow().tz_localize(None) - timedelta(days=days)
+            df = df[df["timestamp"] >= cutoff]
+
     counts = df["item_name"].value_counts().reset_index()
     counts.columns = ["item_name", "order_count"]
     return counts.head(top_n).to_dict(orient="records")
+
 
 def try_personalized(user_id: str, top_n: int = 5):
     try:
