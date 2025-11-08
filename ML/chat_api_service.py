@@ -12,10 +12,7 @@ from ML.API.recommend_api import load_orders, get_popular
 
 load_dotenv()
 
-app = FastAPI(
-    title="Canteen Chatbot API",
-    description="Dynamic canteen chatbot with menu, stock, specials, sentiment & recommendations."
-)
+app = FastAPI(title="Canteen Chatbot API")
 
 app.add_middleware(
     CORSMiddleware,
@@ -27,29 +24,29 @@ app.add_middleware(
 
 MENU_PATH = "ML/Data/raw/menu.csv"
 
-def load_menu():
+def lazy_menu():
     df = pd.read_csv(MENU_PATH)
     df["available"] = df["available"].astype(str).str.lower().isin(["yes", "true", "1"])
     return df
 
-def get_menu_text():
-    df = load_menu()
+def menu_text():
+    df = lazy_menu()
     return "\n".join([f"- {row['item_name']} — ₹{row['price']}" for _, row in df.iterrows()])
 
-def get_daily_stock():
-    df = load_menu()
+def stock_status():
+    df = lazy_menu()
     return {row["item_name"]: row["available"] for _, row in df.iterrows()}
 
-def get_daily_specials():
-    df = load_menu()
+def specials():
+    df = lazy_menu()
     return df.sample(min(2, len(df)))["item_name"].tolist()
 
-def get_popularity_rank():
-    df = load_orders()
-    pop = get_popular(df, top_n=10)
-    return {entry["item_name"]: idx + 1 for idx, entry in enumerate(pop)}
+def popularity_rank():
+    orders = load_orders()
+    pop = get_popular(orders, top_n=10)
+    return {entry["item_name"]: i + 1 for i, entry in enumerate(pop)}
 
-def detect_mood(text):
+def mood_detect(text):
     t = text.lower()
     if any(k in t for k in ["tired", "sleepy"]): return "tired"
     if any(k in t for k in ["sad", "upset"]): return "sad"
@@ -75,95 +72,79 @@ class ChatResponse(BaseModel):
 try:
     gemini_client = genai.Client()
     MODEL = "gemini-2.5-flash"
-except Exception:
+except:
     gemini_client = None
 
-def build_system_prompt(user_message):
-    menu_text = get_menu_text()
-    stock = get_daily_stock()
-    specials = get_daily_specials()
-    pop_rank = get_popularity_rank()
-    mood = detect_mood(user_message)
-    mood_hint = {
+def system_prompt(user_message):
+    m = mood_detect(user_message)
+    menu = menu_text()
+    stock = stock_status()
+    pop = popularity_rank()
+    sp = specials()
+    mh = {
         "tired": "User is tired. Suggest energy boosters like Cold Coffee.",
-        "hungry": "User is extremely hungry. Suggest filling meals like Veg Thali or Paneer Thali.",
+        "hungry": "User is hungry. Suggest Veg Thali or Paneer Thali.",
         "sad": "User is sad. Suggest comfort foods like Maggi or Samosa.",
-        "angry": "User is irritated. Suggest quick-served items like Samosa.",
-    }.get(mood, "")
-
+        "angry": "User is irritated. Suggest quick items like Samosa."
+    }.get(m, "")
     return f"""
-You are the official Canteen AI Assistant.
+You are the canteen assistant.
 
 MENU:
-{menu_text}
+{menu}
 
-STOCK STATUS:
+STOCK:
 {stock}
 
-POPULAR ITEMS:
-{pop_rank}
+POPULAR:
+{pop}
 
-TODAY'S SPECIALS:
-{specials}
+SPECIALS:
+{sp}
 
-MOOD HINT:
-{mood_hint}
+MOOD:
+{mh}
 
 RULES:
 - For greetings respond friendly.
-- For availability check stock.
-- For out-of-stock say unavailable.
-- For recommendations respond EXACTLY in JSON:
-  {{"action": "recommend", "query": "<user message>"}}
-- If item not in menu say unavailable.
-- Never invent items or prices.
-- Keep responses natural and helpful.
+- For availability check stock strictly.
+- For unavailable items say they are not available.
+- For recommendations respond exactly in JSON:
+  {{"action":"recommend","query":"<user message>"}}
+- Never invent items.
 """
 
 @app.post("/chat", response_model=ChatResponse)
-async def chat_endpoint(request: ChatRequest):
+async def chat(request: ChatRequest):
     if not gemini_client:
         raise HTTPException(503, "AI unavailable")
 
-    system_prompt = build_system_prompt(request.new_message)
-
-    conversation = [
-        types.Content(role="user", parts=[types.Part(text=system_prompt)])
-    ]
+    sp = system_prompt(request.new_message)
+    convo = [types.Content(role="user", parts=[types.Part(text=sp)])]
 
     for msg in request.history:
-        conversation.append(
+        convo.append(
             types.Content(
                 role=msg.role,
                 parts=[types.Part(text=p.text) for p in msg.parts]
             )
         )
 
-    conversation.append(
-        types.Content(
-            role="user",
-            parts=[types.Part(text=request.new_message)]
-        )
+    convo.append(
+        types.Content(role="user", parts=[types.Part(text=request.new_message)])
     )
 
     try:
-        response = gemini_client.models.generate_content(
-            model=MODEL,
-            contents=conversation
-        )
-
-        reply = response.text
-
-        updated_history = request.history + [
+        res = gemini_client.models.generate_content(model=MODEL, contents=convo)
+        reply = res.text
+        updated = request.history + [
             Content(role="user", parts=[Part(text=request.new_message)]),
             Content(role="model", parts=[Part(text=reply)])
         ]
-
-        return ChatResponse(reply=reply, updated_history=updated_history)
-
+        return ChatResponse(reply=reply, updated_history=updated)
     except Exception as e:
-        raise HTTPException(500, f"Gemini API Error: {e}")
+        raise HTTPException(500, str(e))
 
 @app.get("/")
-def home():
-    return {"msg": "Dynamic Canteen Chatbot ✅ Running!"}
+def root():
+    return {"msg": "Chatbot Live ✅"}
