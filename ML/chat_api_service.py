@@ -1,15 +1,21 @@
 import os
+import random
+import pandas as pd
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
-from typing import List
+from fastapi.middleware.cors import CORSMiddleware
 from google import genai
 from google.genai import types
-from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
+from typing import List
+
+from ML.API.recommend_api import load_orders, get_popular
+
+load_dotenv()
 
 app = FastAPI(
-    title="Gemini Conversational API",
-    description="Canteen-aware chatbot with menu."
+    title="Canteen Chatbot API",
+    description="Dynamic canteen chatbot with menu, stock, specials, sentiment & recommendations."
 )
 
 app.add_middleware(
@@ -20,77 +26,119 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-load_dotenv()
+MENU_PATH = "ML/Data/raw/menu.csv"
 
-CANTEEN_MENU = """
-Available items in our University Canteen:
 
-- Veg Sandwich — ₹40  
-- Cheese Maggi — ₹60  
-- Veg Thali — ₹80  
-- Paneer Thali — ₹110  
-- Cold Coffee — ₹50  
-- Masala Dosa — ₹70  
-- Samosa — ₹15  
-- Chole Bhature — ₹65  
-- Idli Sambhar — ₹40  
-- Fried Rice — ₹70  
-"""
+def load_menu():
+    df = pd.read_csv(MENU_PATH)
+    df["available"] = df["available"].astype(str).str.lower().isin(["yes", "true", "1"])
+    return df
 
-SYSTEM_PROMPT = f"""
-You are the official AI assistant for the College Canteen.
 
-RULES:
-1. You ONLY use the following menu:
-{CANTEEN_MENU}
+MENU_DF = load_menu()
 
-2. If a user asks for recommendations:
-   Respond EXACTLY in JSON:
-   {{"action": "recommend", "query": "<user message>"}}
 
-3. If the user asks about a food item NOT in the menu:
-   Respond: "Sorry, that item is not available in our canteen."
+def menu_to_text(df):
+    return "\n".join([f"- {row['item_name']} — ₹{row['price']}" for _, row in df.iterrows()])
 
-4. For price, ingredients, availability: answer using ONLY the menu.
 
-5. Never invent dishes or extra details.
-"""
+CANTEEN_MENU_TEXT = menu_to_text(MENU_DF)
+
+DAILY_STOCK = {row["item_name"]: row["available"] for _, row in MENU_DF.iterrows()}
+
+DAILY_SPECIALS = MENU_DF.sample(2)["item_name"].tolist()
+
+ORDER_DATA = load_orders()
+POPULARITY_DATA = get_popular(ORDER_DATA, top_n=10)
+POPULARITY_RANK = {entry["item_name"]: idx + 1 for idx, entry in enumerate(POPULARITY_DATA)}
+
+
+def detect_mood(text):
+    t = text.lower()
+    if any(k in t for k in ["tired", "sleepy"]): return "tired"
+    if any(k in t for k in ["sad", "upset"]): return "sad"
+    if any(k in t for k in ["angry", "irritated"]): return "angry"
+    if any(k in t for k in ["hungry", "starving"]): return "hungry"
+    return None
+
 
 class Part(BaseModel):
     text: str
+
 
 class Content(BaseModel):
     role: str = Field(..., pattern="^(user|model)$")
     parts: List[Part]
 
+
 class ChatRequest(BaseModel):
     history: List[Content]
     new_message: str
+
 
 class ChatResponse(BaseModel):
     reply: str
     updated_history: List[Content]
 
+
 try:
     gemini_client = genai.Client()
-    GEMINI_MODEL = "gemini-2.5-flash"
+    MODEL = "gemini-2.5-flash"
 except Exception:
     gemini_client = None
+
+
+def build_system_prompt(user_message):
+    mood = detect_mood(user_message)
+
+    mood_hint = {
+        "tired": "User is tired. Suggest energy boosters like Cold Coffee.",
+        "hungry": "User is extremely hungry. Suggest filling meals like Veg Thali or Paneer Thali.",
+        "sad": "User is sad. Suggest mood-lifting comfort foods like Maggi or Samosa.",
+        "angry": "User is irritated. Suggest quick-served food like Samosa.",
+    }.get(mood, "")
+
+    return f"""
+You are the official Canteen AI Assistant.
+
+MENU:
+{CANTEEN_MENU_TEXT}
+
+STOCK STATUS:
+{DAILY_STOCK}
+
+POPULAR ITEMS:
+{POPULARITY_RANK}
+
+TODAY'S SPECIALS:
+{DAILY_SPECIALS}
+
+MOOD HINT:
+{mood_hint}
+
+BEHAVIOR RULES:
+- For greetings like "hi", "hello", "how are you", respond friendly & conversational.
+- For dish availability: check stock and respond accordingly.
+- For out of stock items: say they are currently unavailable.
+- For recommendations: reply EXACTLY this JSON:
+  {{"action": "recommend", "query": "<user message>"}}
+- If a user asks about an item not in the menu: respond "Sorry, that item is not available in our canteen."
+- Never invent items or prices.
+- Keep responses helpful, natural, friendly, and human-like.
+"""
+
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
 
     if not gemini_client:
-        raise HTTPException(503, "AI service unavailable")
+        raise HTTPException(503, "AI unavailable")
 
-    conversation = []
+    system_prompt = build_system_prompt(request.new_message)
 
-    conversation.append(
-        types.Content(
-            role="user",
-            parts=[types.Part(text=SYSTEM_PROMPT)]
-        )
-    )
+    conversation = [
+        types.Content(role="user", parts=[types.Part(text=system_prompt)])
+    ]
 
     for msg in request.history:
         conversation.append(
@@ -108,23 +156,24 @@ async def chat_endpoint(request: ChatRequest):
     )
 
     try:
-        ai_response = gemini_client.models.generate_content(
-            model=GEMINI_MODEL,
+        response = gemini_client.models.generate_content(
+            model=MODEL,
             contents=conversation
         )
 
-        reply_text = ai_response.text
+        reply = response.text
 
         updated_history = request.history + [
             Content(role="user", parts=[Part(text=request.new_message)]),
-            Content(role="model", parts=[Part(text=reply_text)])
+            Content(role="model", parts=[Part(text=reply)])
         ]
 
-        return ChatResponse(reply=reply_text, updated_history=updated_history)
+        return ChatResponse(reply=reply, updated_history=updated_history)
 
     except Exception as e:
-        raise HTTPException(500, f"Gemini API error: {e}")
+        raise HTTPException(500, f"Gemini API Error: {e}")
+
 
 @app.get("/")
 def home():
-    return {"message": "Canteen Chatbot API running ✅", "docs": "/chat/docs"}
+    return {"msg": "Dynamic Canteen Chatbot ✅ Running!"}
