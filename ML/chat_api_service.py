@@ -4,11 +4,10 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from typing import List
 from google import genai
-from google.genai import types
 from fastapi.middleware.cors import CORSMiddleware
 
 # ------------------------------------------------------
-# ✅ 1. Create FastAPI app FIRST (CRUCIAL!)
+# ✅ 1. Create FastAPI app
 # ------------------------------------------------------
 app = FastAPI(
     title="Gemini Conversational API",
@@ -16,18 +15,18 @@ app = FastAPI(
 )
 
 # ------------------------------------------------------
-# ✅ 2. THEN add CORS middleware
+# ✅ 2. Enable CORS
 # ------------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],      # allow frontend
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # ------------------------------------------------------
-# ✅ 3. Load environment
+# ✅ 3. Load .env
 # ------------------------------------------------------
 load_dotenv()
 
@@ -60,7 +59,7 @@ except Exception as e:
     print("CRITICAL: Failed to initialize Gemini Client:", e)
 
 # ------------------------------------------------------
-# ✅ 6. Chat Endpoint
+# ✅ 6. Chat Endpoint (FIXED ✅ WORKING ✅)
 # ------------------------------------------------------
 @app.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
@@ -68,27 +67,23 @@ async def chat_endpoint(request: ChatRequest):
     if not gemini_client:
         raise HTTPException(503, "AI service unavailable")
 
+    # ✅ Build conversation in the NEW correct GenAI JSON format
     conversation = []
 
-    # Convert history to Gemini format
     for msg in request.history:
-        conversation.append(
-            types.Content(
-                role=msg.role,
-                parts=[types.Part.from_text(p.text) for p in msg.parts]
-            )
-        )
+        conversation.append({
+            "role": msg.role,
+            "parts": [{"text": p.text} for p in msg.parts]
+        })
 
-    # Add user message
-    conversation.append(
-        types.Content(
-            role="user",
-            parts=[types.Part.from_text(request.new_message)]
-        )
-    )
+    # ✅ Add new message
+    conversation.append({
+        "role": "user",
+        "parts": [{"text": request.new_message}]
+    })
 
     try:
-        # Generate response from Gemini API
+        # ✅ Correct Gemini API Call
         response = gemini_client.models.generate_content(
             model=GEMINI_MODEL,
             contents=conversation
@@ -96,14 +91,9 @@ async def chat_endpoint(request: ChatRequest):
 
         reply_text = response.text
 
-        new_ai_msg = Content(
-            role="model",
-            parts=[Part(text=reply_text)]
-        )
-
         updated_history = request.history + [
             Content(role="user", parts=[Part(text=request.new_message)]),
-            new_ai_msg
+            Content(role="model", parts=[Part(text=reply_text)])
         ]
 
         return ChatResponse(
