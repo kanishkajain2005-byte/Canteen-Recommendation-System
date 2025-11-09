@@ -1,0 +1,701 @@
+user_id,item_id,item_name,category,price,datetime,time_of_day,day_of_week,rating,calories,spicy_level,popularity_score,purchase_count,last_purchased_days_ago,user_age_group,user_gender,user_avg_spend,combo_preference
+U130,22,Rajma Chawal,Special,50,2024-08-22 10:58:00,Breakfast,Thursday,3,450,Medium,87,20,3,30s,F,62,Pizza+ColdDrink
+U186,5,Maggi,Snacks,35,2025-08-02 13:58:00,Lunch,Saturday,3,300,Medium,50,8,12,Teen,M,42,Burger+Fries
+U103,10,Coffee,Beverages,30,2024-01-06 14:42:00,Lunch,Saturday,4,100,Mild,79,17,8,30s,M,71,Burger+Fries
+U140,17,Fried Rice,Noodles,50,2024-08-12 08:03:00,Breakfast,Monday,4,350,Medium,55,8,12,20s,M,45,Maggi+Chai
+U124,18,Cheese Pizza,Pizza,65,2024-08-18 11:28:00,Lunch,Sunday,4,400,Mild,97,11,12,Teen,M,71,Burger+Fries
+U121,24,Puri-Sabji,Special,40,2024-08-11 14:57:00,Lunch,Sunday,4,400,Medium,82,12,0,Teen,M,40,Lassi+RajmaChawal
+U167,2,Samosa,Snacks,15,2024-08-21 14:18:00,Lunch,Wednesday,3,180,Spicy,59,15,9,30s,F,23,Sandwich+Coffee
+U145,12,Vegan Sandwich,Sandwich,35,2025-09-19 16:52:00,Snacks,Friday,4,200,Mild,75,3,15,Teen,F,80,Chai+Samosa
+U147,2,Samosa,Snacks,15,2025-10-06 14:05:00,Lunch,Monday,5,180,Spicy,99,7,15,20s,M,72,Pizza+ColdDrink
+U197,20,Corn Pizza,Pizza,75,2025-10-23 11:43:00,Lunch,Thursday,5,420,Mild,50,14,11,Teen,F,24,Sandwich+Coffee
+U198,15,Veg Noodles,Noodles,40,2025-06-20 11:14:00,Lunch,Friday,3,280,Medium,66,19,2,30s,F,59,Burger+Fries
+U117,5,Maggi,Snacks,35,2024-03-24 14:56:00,Lunch,Sunday,5,300,Medium,66,12,9,30s,M,46,Chai+Samosa
+U113,12,Vegan Sandwich,Sandwich,35,2024-06-09 11:35:00,Lunch,Sunday,3,200,Mild,85,2,10,30s,M,53,Burger+Fries
+U122,1,Chips,Snacks,20,2024-04-06 08:31:00,Breakfast,Saturday,4,150,Mild,56,15,12,30s,F,27,Chai+Samosa
+U185,12,Vegan Sandwich,Sandwich,35,2025-09-27 08:37:00,Breakfast,Saturday,3,200,Mild,55,14,13,Teen,F,77,Maggi+Chai
+U112,16,Hakka Noodles,Noodles,45,2024-06-25 13:35:00,Lunch,Tuesday,5,300,Spicy,71,6,13,20s,M,33,Maggi+Chai
+U138,20,Corn Pizza,Pizza,75,2024-11-25 11:33:00,Lunch,Monday,3,420,Mild,85,6,11,Teen,M,31,Maggi+Chai
+U102,11,Milkshake,Beverages,50,2024-12-31 09:51:00,Breakfast,Tuesday,4,220,Mild,80,14,3,30s,M,21,Pizza+ColdDrink
+U160,14,Bread Sandwich,Sandwich,24,2025-10-03 11:17:00,Lunch,Friday,5,190,Mild,72,2,11,30s,M,41,Maggi+Chai
+U115,21,Chole Bature,Special,50,2025-08-27 15:25:00,Snacks,Wednesday,4,500,Medium,58,6,14,20s,F,50,Burger+Fries
+U132,12,Vegan Sandwich,Sandwich,35,2025-09-02 12:02:00,Lunch,Tuesday,5,200,Mild,83,1,3,30s,F,27,Chai+Samosa
+U146,22,Rajma Chawal,Special,50,2024-06-25 16:51:00,Snacks,Tuesday,5,450,Medium,56,11,6,30s,M,60,Pizza+ColdDrink
+U134,11,Milkshake,Beverages,50,2024-05-30 11:17:00,Lunch,Thursday,5,220,Mild,86,4,4,20s,M,55,Lassi+RajmaChawal
+U127,3,Burger,Salad,35,2025-03-16 14:44:00,Lunch,Sunday,5,250,Medium,62,13,5,Teen,F,27,Sandwich+Coffee
+U131,20,Corn Pizza,Pizza,75,2025-08-14 09:32:00,Breakfast,Thursday,5,420,Mild,88,20,3,20s,F,63,Chai+Samosa
+U157,17,Fried Rice,Noodles,50,2024-02-06 10:30:00,Breakfast,Tuesday,4,350,Medium,56,17,13,Teen,M,68,Sandwich+Coffee
+U130,11,Milkshake,Beverages,50,2024-09-28 14:34:00,Lunch,Saturday,3,220,Mild,86,19,4,20s,F,71,Lassi+RajmaChawal
+U196,1,Chips,Snacks,20,2024-05-08 16:27:00,Snacks,Wednesday,5,150,Mild,55,9,11,Teen,M,22,Pizza+ColdDrink
+U102,15,Veg Noodles,Noodles,40,2025-01-27 11:50:00,Lunch,Monday,4,280,Medium,77,20,12,30s,F,37,Sandwich+Coffee
+U138,7,Chai,Beverages,15,2025-07-10 13:08:00,Lunch,Thursday,3,80,Mild,100,12,9,20s,F,68,Chai+Samosa
+U182,11,Milkshake,Beverages,50,2025-05-13 12:00:00,Lunch,Tuesday,5,220,Mild,62,16,13,30s,F,33,Chai+Samosa
+U190,17,Fried Rice,Noodles,50,2025-06-24 11:40:00,Lunch,Tuesday,3,350,Medium,59,19,4,Teen,M,45,Burger+Fries
+U117,5,Maggi,Snacks,35,2025-03-30 10:37:00,Breakfast,Sunday,3,300,Medium,95,3,15,Teen,F,47,Chai+Samosa
+U143,23,Chole Chawal,Special,55,2024-11-22 15:00:00,Snacks,Friday,4,470,Spicy,80,1,6,Teen,F,50,Sandwich+Coffee
+U100,11,Milkshake,Beverages,50,2024-12-26 08:29:00,Breakfast,Thursday,5,220,Mild,68,15,5,20s,F,24,Maggi+Chai
+U197,18,Cheese Pizza,Pizza,65,2024-07-06 10:04:00,Breakfast,Saturday,5,400,Mild,81,5,1,30s,F,69,Sandwich+Coffee
+U143,1,Chips,Snacks,20,2024-01-05 12:54:00,Lunch,Friday,4,150,Mild,64,19,10,20s,F,68,Sandwich+Coffee
+U180,9,Lassi,Beverages,25,2025-10-26 13:45:00,Lunch,Sunday,5,200,Mild,89,2,14,30s,F,76,Pizza+ColdDrink
+U162,12,Vegan Sandwich,Sandwich,35,2025-04-01 08:07:00,Breakfast,Tuesday,4,200,Mild,55,18,3,Teen,F,80,Sandwich+Coffee
+U174,19,Tomato Pizza,Pizza,70,2025-04-05 15:23:00,Snacks,Saturday,5,380,Medium,99,10,8,30s,M,48,Pizza+ColdDrink
+U180,6,Peri Peri Fries,Snacks,50,2025-08-05 16:34:00,Snacks,Tuesday,5,320,Spicy,94,8,12,Teen,M,67,Burger+Fries
+U155,14,Bread Sandwich,Sandwich,24,2025-02-25 17:04:00,Snacks,Tuesday,5,190,Mild,82,20,11,20s,M,59,Pizza+ColdDrink
+U104,18,Cheese Pizza,Pizza,65,2024-05-12 10:47:00,Breakfast,Sunday,3,400,Mild,71,17,7,Teen,M,78,Lassi+RajmaChawal
+U150,10,Coffee,Beverages,30,2024-12-27 09:33:00,Breakfast,Friday,4,100,Mild,97,4,12,Teen,M,30,Burger+Fries
+U180,3,Burger,Salad,35,2024-05-16 11:47:00,Lunch,Thursday,5,250,Medium,63,20,0,30s,F,48,Burger+Fries
+U154,5,Maggi,Snacks,35,2025-06-14 16:29:00,Snacks,Saturday,5,300,Medium,83,9,15,30s,F,55,Burger+Fries
+U138,19,Tomato Pizza,Pizza,70,2025-02-08 10:04:00,Breakfast,Saturday,5,380,Medium,76,4,6,Teen,M,48,Chai+Samosa
+U199,12,Vegan Sandwich,Sandwich,35,2024-09-02 13:52:00,Lunch,Monday,3,200,Mild,75,13,0,Teen,F,34,Burger+Fries
+U110,3,Burger,Salad,35,2024-06-04 14:52:00,Lunch,Tuesday,4,250,Medium,94,19,3,30s,F,41,Lassi+RajmaChawal
+U167,13,Grilled Sandwich,Sandwich,40,2024-09-10 09:14:00,Breakfast,Tuesday,3,230,Medium,58,10,3,20s,F,36,Lassi+RajmaChawal
+U116,2,Samosa,Snacks,15,2024-04-12 14:25:00,Lunch,Friday,3,180,Spicy,72,20,1,30s,F,47,Chai+Samosa
+U199,15,Veg Noodles,Noodles,40,2024-03-12 16:23:00,Snacks,Tuesday,3,280,Medium,56,18,7,20s,F,64,Maggi+Chai
+U193,1,Chips,Snacks,20,2025-06-16 15:20:00,Snacks,Monday,4,150,Mild,50,14,15,30s,M,52,Maggi+Chai
+U187,15,Veg Noodles,Noodles,40,2025-05-17 17:32:00,Snacks,Saturday,5,280,Medium,89,4,6,20s,F,69,Pizza+ColdDrink
+U177,8,Cold drinks,Beverages,20,2024-12-23 13:14:00,Lunch,Monday,4,160,Mild,92,11,14,20s,M,43,Maggi+Chai
+U125,4,Hot Dog,Snacks,45,2024-09-25 16:49:00,Snacks,Wednesday,4,270,Spicy,62,11,10,20s,F,49,Chai+Samosa
+U160,6,Peri Peri Fries,Snacks,50,2024-07-04 14:17:00,Lunch,Thursday,5,320,Spicy,72,18,5,20s,M,52,Sandwich+Coffee
+U188,24,Puri-Sabji,Special,40,2025-10-12 10:27:00,Breakfast,Sunday,5,400,Medium,86,14,8,20s,F,33,Chai+Samosa
+U146,21,Chole Bature,Special,50,2024-04-08 12:52:00,Lunch,Monday,5,500,Medium,78,10,13,20s,F,70,Maggi+Chai
+U185,6,Peri Peri Fries,Snacks,50,2024-04-04 09:20:00,Breakfast,Thursday,4,320,Spicy,82,1,8,30s,F,65,Lassi+RajmaChawal
+U136,10,Coffee,Beverages,30,2025-05-07 15:40:00,Snacks,Wednesday,4,100,Mild,56,19,8,Teen,M,60,Burger+Fries
+U121,11,Milkshake,Beverages,50,2024-03-21 10:01:00,Breakfast,Thursday,5,220,Mild,67,11,0,Teen,F,72,Sandwich+Coffee
+U170,9,Lassi,Beverages,25,2025-07-19 10:02:00,Breakfast,Saturday,3,200,Mild,93,12,4,20s,M,78,Lassi+RajmaChawal
+U147,23,Chole Chawal,Special,55,2025-10-08 15:09:00,Snacks,Wednesday,4,470,Spicy,79,17,11,30s,F,79,Chai+Samosa
+U198,19,Tomato Pizza,Pizza,70,2025-08-28 09:43:00,Breakfast,Thursday,4,380,Medium,60,12,3,30s,M,23,Lassi+RajmaChawal
+U110,21,Chole Bature,Special,50,2024-08-17 08:36:00,Breakfast,Saturday,5,500,Medium,85,8,2,30s,M,20,Maggi+Chai
+U128,16,Hakka Noodles,Noodles,45,2024-05-01 10:31:00,Breakfast,Wednesday,5,300,Spicy,57,14,0,20s,M,24,Burger+Fries
+U177,23,Chole Chawal,Special,55,2025-03-05 15:28:00,Snacks,Wednesday,4,470,Spicy,76,6,15,30s,F,62,Sandwich+Coffee
+U132,18,Cheese Pizza,Pizza,65,2024-08-31 10:47:00,Breakfast,Saturday,4,400,Mild,53,5,5,30s,M,67,Chai+Samosa
+U151,8,Cold drinks,Beverages,20,2024-06-25 12:21:00,Lunch,Tuesday,4,160,Mild,60,17,1,20s,F,21,Lassi+RajmaChawal
+U129,18,Cheese Pizza,Pizza,65,2024-06-24 09:02:00,Breakfast,Monday,5,400,Mild,61,18,3,20s,M,35,Sandwich+Coffee
+U181,16,Hakka Noodles,Noodles,45,2025-08-12 14:01:00,Lunch,Tuesday,5,300,Spicy,91,12,0,20s,F,45,Pizza+ColdDrink
+U170,9,Lassi,Beverages,25,2024-09-26 10:04:00,Breakfast,Thursday,5,200,Mild,99,10,9,30s,M,80,Burger+Fries
+U143,5,Maggi,Snacks,35,2025-04-25 10:39:00,Breakfast,Friday,4,300,Medium,85,7,0,30s,M,76,Lassi+RajmaChawal
+U187,14,Bread Sandwich,Sandwich,24,2025-02-04 13:17:00,Lunch,Tuesday,4,190,Mild,97,2,12,20s,F,66,Sandwich+Coffee
+U170,17,Fried Rice,Noodles,50,2024-02-02 14:13:00,Lunch,Friday,3,350,Medium,78,2,2,Teen,F,56,Chai+Samosa
+U149,10,Coffee,Beverages,30,2024-02-28 16:23:00,Snacks,Wednesday,4,100,Mild,71,3,2,Teen,M,76,Sandwich+Coffee
+U159,6,Peri Peri Fries,Snacks,50,2024-05-11 16:12:00,Snacks,Saturday,3,320,Spicy,73,16,1,30s,F,37,Maggi+Chai
+U193,22,Rajma Chawal,Special,50,2024-06-13 14:36:00,Lunch,Thursday,5,450,Medium,64,17,2,20s,F,64,Sandwich+Coffee
+U191,10,Coffee,Beverages,30,2025-04-19 13:20:00,Lunch,Saturday,3,100,Mild,86,19,14,20s,F,39,Maggi+Chai
+U135,11,Milkshake,Beverages,50,2024-08-02 17:52:00,Snacks,Friday,3,220,Mild,74,12,14,Teen,F,23,Pizza+ColdDrink
+U124,2,Samosa,Snacks,15,2025-03-31 17:27:00,Snacks,Monday,4,180,Spicy,97,12,8,Teen,M,59,Lassi+RajmaChawal
+U101,24,Puri-Sabji,Special,40,2024-09-29 10:15:00,Breakfast,Sunday,4,400,Medium,70,19,1,20s,M,55,Burger+Fries
+U180,9,Lassi,Beverages,25,2024-05-21 11:29:00,Lunch,Tuesday,3,200,Mild,99,19,12,30s,F,67,Chai+Samosa
+U132,12,Vegan Sandwich,Sandwich,35,2024-11-19 09:17:00,Breakfast,Tuesday,5,200,Mild,82,3,11,20s,F,52,Lassi+RajmaChawal
+U115,21,Chole Bature,Special,50,2025-04-15 08:14:00,Breakfast,Tuesday,5,500,Medium,93,10,9,30s,F,59,Sandwich+Coffee
+U134,13,Grilled Sandwich,Sandwich,40,2024-06-30 15:08:00,Snacks,Sunday,5,230,Medium,67,9,15,Teen,M,63,Lassi+RajmaChawal
+U186,12,Vegan Sandwich,Sandwich,35,2025-01-11 12:57:00,Lunch,Saturday,5,200,Mild,89,8,14,Teen,F,44,Burger+Fries
+U176,1,Chips,Snacks,20,2024-06-25 12:54:00,Lunch,Tuesday,3,150,Mild,92,10,6,30s,M,39,Chai+Samosa
+U151,18,Cheese Pizza,Pizza,65,2024-05-31 15:02:00,Snacks,Friday,3,400,Mild,92,9,11,30s,F,24,Pizza+ColdDrink
+U128,13,Grilled Sandwich,Sandwich,40,2024-08-15 09:29:00,Breakfast,Thursday,4,230,Medium,81,20,1,30s,M,21,Lassi+RajmaChawal
+U110,22,Rajma Chawal,Special,50,2024-11-28 14:32:00,Lunch,Thursday,3,450,Medium,91,2,11,30s,M,58,Lassi+RajmaChawal
+U168,19,Tomato Pizza,Pizza,70,2024-01-24 09:44:00,Breakfast,Wednesday,4,380,Medium,96,2,10,30s,M,29,Chai+Samosa
+U103,19,Tomato Pizza,Pizza,70,2025-10-08 17:11:00,Snacks,Wednesday,4,380,Medium,74,19,13,20s,M,42,Lassi+RajmaChawal
+U169,10,Coffee,Beverages,30,2024-01-19 17:06:00,Snacks,Friday,4,100,Mild,86,7,9,Teen,F,71,Burger+Fries
+U159,19,Tomato Pizza,Pizza,70,2025-09-12 15:06:00,Snacks,Friday,5,380,Medium,85,17,13,Teen,M,47,Sandwich+Coffee
+U192,16,Hakka Noodles,Noodles,45,2025-09-13 15:12:00,Snacks,Saturday,4,300,Spicy,89,14,4,20s,M,43,Maggi+Chai
+U119,13,Grilled Sandwich,Sandwich,40,2025-05-26 12:08:00,Lunch,Monday,4,230,Medium,57,12,4,20s,F,60,Burger+Fries
+U183,22,Rajma Chawal,Special,50,2025-01-09 12:15:00,Lunch,Thursday,5,450,Medium,87,3,6,30s,F,63,Lassi+RajmaChawal
+U192,12,Vegan Sandwich,Sandwich,35,2024-06-14 14:35:00,Lunch,Friday,4,200,Mild,83,15,11,Teen,M,53,Lassi+RajmaChawal
+U190,24,Puri-Sabji,Special,40,2024-10-24 17:41:00,Snacks,Thursday,3,400,Medium,83,11,4,20s,M,35,Sandwich+Coffee
+U187,7,Chai,Beverages,15,2025-06-22 16:17:00,Snacks,Sunday,4,80,Mild,71,4,7,Teen,F,33,Chai+Samosa
+U162,6,Peri Peri Fries,Snacks,50,2024-04-13 11:16:00,Lunch,Saturday,4,320,Spicy,75,6,7,30s,F,48,Chai+Samosa
+U145,3,Burger,Salad,35,2024-01-29 09:33:00,Breakfast,Monday,3,250,Medium,70,18,13,30s,M,46,Burger+Fries
+U166,19,Tomato Pizza,Pizza,70,2024-11-15 17:11:00,Snacks,Friday,5,380,Medium,93,17,1,30s,F,26,Pizza+ColdDrink
+U180,9,Lassi,Beverages,25,2025-05-10 12:45:00,Lunch,Saturday,3,200,Mild,78,3,5,20s,F,24,Burger+Fries
+U135,22,Rajma Chawal,Special,50,2025-06-25 08:33:00,Breakfast,Wednesday,4,450,Medium,84,5,12,30s,F,79,Lassi+RajmaChawal
+U126,17,Fried Rice,Noodles,50,2024-05-18 11:50:00,Lunch,Saturday,5,350,Medium,65,18,6,Teen,F,69,Chai+Samosa
+U161,14,Bread Sandwich,Sandwich,24,2024-12-11 17:55:00,Snacks,Wednesday,3,190,Mild,71,19,15,Teen,M,26,Burger+Fries
+U193,14,Bread Sandwich,Sandwich,24,2025-03-03 13:16:00,Lunch,Monday,4,190,Mild,78,6,11,Teen,M,70,Chai+Samosa
+U193,6,Peri Peri Fries,Snacks,50,2025-05-22 17:43:00,Snacks,Thursday,3,320,Spicy,53,20,9,30s,M,30,Chai+Samosa
+U151,7,Chai,Beverages,15,2024-01-13 09:46:00,Breakfast,Saturday,5,80,Mild,71,4,4,Teen,F,47,Sandwich+Coffee
+U176,2,Samosa,Snacks,15,2024-06-08 08:29:00,Breakfast,Saturday,3,180,Spicy,61,7,2,Teen,F,31,Chai+Samosa
+U121,16,Hakka Noodles,Noodles,45,2024-12-06 13:21:00,Lunch,Friday,3,300,Spicy,62,9,5,20s,F,39,Pizza+ColdDrink
+U170,17,Fried Rice,Noodles,50,2024-11-02 13:04:00,Lunch,Saturday,4,350,Medium,78,2,15,30s,F,37,Pizza+ColdDrink
+U197,2,Samosa,Snacks,15,2025-04-29 16:05:00,Snacks,Tuesday,5,180,Spicy,62,3,14,20s,F,67,Pizza+ColdDrink
+U194,12,Vegan Sandwich,Sandwich,35,2024-10-22 08:57:00,Breakfast,Tuesday,4,200,Mild,93,4,1,Teen,F,42,Maggi+Chai
+U137,2,Samosa,Snacks,15,2025-03-02 11:33:00,Lunch,Sunday,4,180,Spicy,74,11,6,Teen,F,38,Maggi+Chai
+U176,5,Maggi,Snacks,35,2024-02-11 11:34:00,Lunch,Sunday,5,300,Medium,90,19,4,20s,M,35,Burger+Fries
+U149,23,Chole Chawal,Special,55,2025-07-01 09:16:00,Breakfast,Tuesday,5,470,Spicy,72,12,8,Teen,F,78,Pizza+ColdDrink
+U177,1,Chips,Snacks,20,2024-12-26 16:55:00,Snacks,Thursday,5,150,Mild,89,11,11,30s,F,73,Pizza+ColdDrink
+U106,24,Puri-Sabji,Special,40,2024-11-08 11:20:00,Lunch,Friday,3,400,Medium,72,19,12,30s,M,69,Burger+Fries
+U138,11,Milkshake,Beverages,50,2024-11-19 11:36:00,Lunch,Tuesday,3,220,Mild,86,1,15,Teen,M,41,Chai+Samosa
+U157,17,Fried Rice,Noodles,50,2024-06-02 12:39:00,Lunch,Sunday,4,350,Medium,89,14,9,30s,F,40,Maggi+Chai
+U167,15,Veg Noodles,Noodles,40,2024-08-01 17:16:00,Snacks,Thursday,5,280,Medium,90,13,10,20s,M,25,Burger+Fries
+U102,13,Grilled Sandwich,Sandwich,40,2025-02-25 17:57:00,Snacks,Tuesday,3,230,Medium,56,9,0,Teen,F,55,Burger+Fries
+U186,22,Rajma Chawal,Special,50,2025-03-20 17:27:00,Snacks,Thursday,3,450,Medium,79,19,13,Teen,F,69,Burger+Fries
+U165,22,Rajma Chawal,Special,50,2024-11-16 12:56:00,Lunch,Saturday,3,450,Medium,95,15,15,30s,M,51,Maggi+Chai
+U194,24,Puri-Sabji,Special,40,2025-05-14 11:29:00,Lunch,Wednesday,3,400,Medium,85,10,3,Teen,M,74,Burger+Fries
+U164,10,Coffee,Beverages,30,2025-04-27 12:01:00,Lunch,Sunday,3,100,Mild,64,13,14,20s,F,43,Sandwich+Coffee
+U177,16,Hakka Noodles,Noodles,45,2025-10-17 13:12:00,Lunch,Friday,4,300,Spicy,52,3,1,20s,F,61,Sandwich+Coffee
+U162,8,Cold drinks,Beverages,20,2024-11-28 08:56:00,Breakfast,Thursday,4,160,Mild,90,6,9,Teen,F,70,Maggi+Chai
+U167,9,Lassi,Beverages,25,2025-07-04 09:28:00,Breakfast,Friday,3,200,Mild,98,2,4,30s,M,29,Burger+Fries
+U130,13,Grilled Sandwich,Sandwich,40,2024-04-12 15:31:00,Snacks,Friday,3,230,Medium,84,2,1,20s,F,24,Chai+Samosa
+U167,7,Chai,Beverages,15,2025-05-24 17:12:00,Snacks,Saturday,4,80,Mild,67,3,6,20s,M,30,Maggi+Chai
+U138,9,Lassi,Beverages,25,2024-09-17 16:55:00,Snacks,Tuesday,4,200,Mild,96,13,9,20s,F,21,Sandwich+Coffee
+U197,22,Rajma Chawal,Special,50,2025-02-12 13:54:00,Lunch,Wednesday,5,450,Medium,64,7,1,30s,F,69,Sandwich+Coffee
+U162,5,Maggi,Snacks,35,2025-08-15 11:08:00,Lunch,Friday,5,300,Medium,86,3,11,20s,F,58,Chai+Samosa
+U147,19,Tomato Pizza,Pizza,70,2024-09-15 10:34:00,Breakfast,Sunday,4,380,Medium,81,5,3,Teen,F,27,Burger+Fries
+U166,18,Cheese Pizza,Pizza,65,2025-05-31 11:46:00,Lunch,Saturday,3,400,Mild,58,5,6,30s,F,38,Sandwich+Coffee
+U106,3,Burger,Salad,35,2025-05-12 16:17:00,Snacks,Monday,4,250,Medium,76,5,9,Teen,F,77,Chai+Samosa
+U138,11,Milkshake,Beverages,50,2024-01-20 15:50:00,Snacks,Saturday,5,220,Mild,88,5,0,30s,F,51,Sandwich+Coffee
+U162,2,Samosa,Snacks,15,2025-01-02 15:30:00,Snacks,Thursday,3,180,Spicy,80,16,1,30s,F,56,Maggi+Chai
+U156,16,Hakka Noodles,Noodles,45,2024-08-30 14:54:00,Lunch,Friday,3,300,Spicy,50,6,15,Teen,M,58,Chai+Samosa
+U106,19,Tomato Pizza,Pizza,70,2024-04-19 11:47:00,Lunch,Friday,4,380,Medium,84,15,13,Teen,M,25,Maggi+Chai
+U123,20,Corn Pizza,Pizza,75,2025-04-30 10:15:00,Breakfast,Wednesday,3,420,Mild,53,9,3,30s,F,74,Sandwich+Coffee
+U198,4,Hot Dog,Snacks,45,2025-09-11 10:49:00,Breakfast,Thursday,3,270,Spicy,58,13,8,30s,M,45,Burger+Fries
+U136,22,Rajma Chawal,Special,50,2025-04-18 14:35:00,Lunch,Friday,5,450,Medium,54,18,14,20s,F,30,Chai+Samosa
+U168,14,Bread Sandwich,Sandwich,24,2025-10-18 13:14:00,Lunch,Saturday,4,190,Mild,84,17,13,30s,F,45,Maggi+Chai
+U182,21,Chole Bature,Special,50,2024-08-18 08:54:00,Breakfast,Sunday,4,500,Medium,75,17,9,20s,F,59,Pizza+ColdDrink
+U139,15,Veg Noodles,Noodles,40,2025-04-21 08:21:00,Breakfast,Monday,4,280,Medium,51,14,1,20s,F,31,Pizza+ColdDrink
+U121,10,Coffee,Beverages,30,2024-09-15 10:16:00,Breakfast,Sunday,5,100,Mild,75,4,14,20s,F,62,Maggi+Chai
+U111,18,Cheese Pizza,Pizza,65,2025-02-07 09:33:00,Breakfast,Friday,5,400,Mild,63,6,4,20s,F,67,Burger+Fries
+U197,24,Puri-Sabji,Special,40,2024-08-19 12:59:00,Lunch,Monday,4,400,Medium,50,9,5,30s,M,71,Burger+Fries
+U137,23,Chole Chawal,Special,55,2025-07-26 12:18:00,Lunch,Saturday,5,470,Spicy,75,4,12,30s,F,42,Maggi+Chai
+U154,14,Bread Sandwich,Sandwich,24,2025-01-15 08:18:00,Breakfast,Wednesday,5,190,Mild,64,16,6,30s,M,78,Burger+Fries
+U116,4,Hot Dog,Snacks,45,2024-05-08 11:59:00,Lunch,Wednesday,3,270,Spicy,61,10,6,20s,M,29,Maggi+Chai
+U128,11,Milkshake,Beverages,50,2025-05-22 13:31:00,Lunch,Thursday,4,220,Mild,92,12,14,20s,M,80,Maggi+Chai
+U187,10,Coffee,Beverages,30,2024-04-12 08:08:00,Breakfast,Friday,5,100,Mild,94,15,14,20s,F,46,Chai+Samosa
+U124,3,Burger,Salad,35,2025-06-30 15:19:00,Snacks,Monday,3,250,Medium,82,8,6,Teen,M,46,Maggi+Chai
+U182,3,Burger,Salad,35,2025-04-23 10:50:00,Breakfast,Wednesday,4,250,Medium,65,12,6,30s,M,65,Maggi+Chai
+U131,6,Peri Peri Fries,Snacks,50,2024-11-02 10:04:00,Breakfast,Saturday,5,320,Spicy,93,1,11,30s,M,43,Sandwich+Coffee
+U158,16,Hakka Noodles,Noodles,45,2024-05-27 16:15:00,Snacks,Monday,3,300,Spicy,82,15,5,Teen,F,45,Chai+Samosa
+U196,17,Fried Rice,Noodles,50,2024-06-29 14:28:00,Lunch,Saturday,3,350,Medium,60,18,8,Teen,F,54,Lassi+RajmaChawal
+U103,14,Bread Sandwich,Sandwich,24,2025-09-23 08:28:00,Breakfast,Tuesday,5,190,Mild,94,4,0,20s,M,35,Burger+Fries
+U177,14,Bread Sandwich,Sandwich,24,2024-06-28 12:59:00,Lunch,Friday,3,190,Mild,84,14,4,30s,F,63,Lassi+RajmaChawal
+U169,19,Tomato Pizza,Pizza,70,2025-02-21 13:24:00,Lunch,Friday,5,380,Medium,73,8,6,Teen,F,62,Maggi+Chai
+U140,16,Hakka Noodles,Noodles,45,2025-05-03 14:41:00,Lunch,Saturday,5,300,Spicy,59,3,13,30s,M,77,Maggi+Chai
+U171,2,Samosa,Snacks,15,2024-04-25 12:30:00,Lunch,Thursday,5,180,Spicy,88,14,8,20s,M,69,Burger+Fries
+U147,1,Chips,Snacks,20,2024-07-30 14:51:00,Lunch,Tuesday,4,150,Mild,97,15,0,30s,F,44,Burger+Fries
+U169,6,Peri Peri Fries,Snacks,50,2025-04-10 13:07:00,Lunch,Thursday,3,320,Spicy,70,10,1,20s,M,80,Maggi+Chai
+U180,3,Burger,Salad,35,2024-02-14 13:39:00,Lunch,Wednesday,3,250,Medium,61,2,2,Teen,M,56,Burger+Fries
+U112,4,Hot Dog,Snacks,45,2025-04-01 10:26:00,Breakfast,Tuesday,3,270,Spicy,62,9,12,Teen,F,45,Sandwich+Coffee
+U195,6,Peri Peri Fries,Snacks,50,2024-09-05 10:22:00,Breakfast,Thursday,5,320,Spicy,74,18,5,30s,M,30,Lassi+RajmaChawal
+U173,12,Vegan Sandwich,Sandwich,35,2025-08-21 10:41:00,Breakfast,Thursday,4,200,Mild,72,12,7,20s,F,51,Maggi+Chai
+U167,22,Rajma Chawal,Special,50,2025-02-18 10:19:00,Breakfast,Tuesday,3,450,Medium,55,2,14,Teen,M,66,Burger+Fries
+U137,5,Maggi,Snacks,35,2025-03-10 17:36:00,Snacks,Monday,3,300,Medium,92,13,3,20s,M,66,Lassi+RajmaChawal
+U167,21,Chole Bature,Special,50,2024-12-13 16:57:00,Snacks,Friday,5,500,Medium,67,16,14,Teen,F,61,Burger+Fries
+U188,1,Chips,Snacks,20,2025-09-11 14:01:00,Lunch,Thursday,4,150,Mild,57,1,11,20s,M,50,Maggi+Chai
+U116,16,Hakka Noodles,Noodles,45,2024-07-19 15:36:00,Snacks,Friday,4,300,Spicy,85,17,14,Teen,F,30,Burger+Fries
+U131,21,Chole Bature,Special,50,2024-11-22 17:42:00,Snacks,Friday,4,500,Medium,90,2,6,30s,M,71,Lassi+RajmaChawal
+U105,22,Rajma Chawal,Special,50,2024-07-15 12:56:00,Lunch,Monday,4,450,Medium,58,9,4,20s,M,80,Pizza+ColdDrink
+U160,24,Puri-Sabji,Special,40,2024-05-20 13:51:00,Lunch,Monday,3,400,Medium,85,13,14,Teen,F,72,Maggi+Chai
+U183,11,Milkshake,Beverages,50,2024-11-14 11:09:00,Lunch,Thursday,4,220,Mild,52,17,9,20s,F,37,Maggi+Chai
+U117,6,Peri Peri Fries,Snacks,50,2024-05-03 13:27:00,Lunch,Friday,3,320,Spicy,100,17,0,30s,M,62,Chai+Samosa
+U171,21,Chole Bature,Special,50,2025-01-26 08:44:00,Breakfast,Sunday,3,500,Medium,67,4,8,20s,F,53,Sandwich+Coffee
+U158,22,Rajma Chawal,Special,50,2024-11-23 15:41:00,Snacks,Saturday,4,450,Medium,74,14,2,30s,M,37,Burger+Fries
+U140,23,Chole Chawal,Special,55,2024-09-08 08:10:00,Breakfast,Sunday,3,470,Spicy,75,14,15,20s,M,51,Chai+Samosa
+U118,4,Hot Dog,Snacks,45,2025-03-23 16:32:00,Snacks,Sunday,4,270,Spicy,90,15,3,Teen,F,47,Pizza+ColdDrink
+U193,11,Milkshake,Beverages,50,2024-01-27 12:36:00,Lunch,Saturday,5,220,Mild,95,10,6,Teen,F,43,Maggi+Chai
+U175,5,Maggi,Snacks,35,2024-10-10 08:33:00,Breakfast,Thursday,5,300,Medium,59,10,3,Teen,F,79,Burger+Fries
+U126,10,Coffee,Beverages,30,2025-03-30 17:40:00,Snacks,Sunday,4,100,Mild,55,19,8,30s,M,30,Sandwich+Coffee
+U113,11,Milkshake,Beverages,50,2025-09-18 12:00:00,Lunch,Thursday,3,220,Mild,84,18,14,20s,M,57,Pizza+ColdDrink
+U120,21,Chole Bature,Special,50,2025-08-31 14:23:00,Lunch,Sunday,4,500,Medium,69,14,0,30s,M,63,Chai+Samosa
+U154,2,Samosa,Snacks,15,2025-01-17 09:45:00,Breakfast,Friday,4,180,Spicy,63,10,8,30s,F,59,Chai+Samosa
+U135,11,Milkshake,Beverages,50,2025-06-13 17:30:00,Snacks,Friday,3,220,Mild,56,5,4,Teen,M,36,Sandwich+Coffee
+U111,9,Lassi,Beverages,25,2025-09-19 13:25:00,Lunch,Friday,4,200,Mild,96,8,15,Teen,M,67,Burger+Fries
+U124,22,Rajma Chawal,Special,50,2025-08-06 09:17:00,Breakfast,Wednesday,3,450,Medium,62,19,3,30s,M,61,Burger+Fries
+U168,20,Corn Pizza,Pizza,75,2024-06-08 15:00:00,Snacks,Saturday,4,420,Mild,53,8,7,20s,M,21,Burger+Fries
+U110,6,Peri Peri Fries,Snacks,50,2025-07-15 11:07:00,Lunch,Tuesday,5,320,Spicy,55,5,15,30s,F,29,Chai+Samosa
+U167,17,Fried Rice,Noodles,50,2025-01-04 13:13:00,Lunch,Saturday,5,350,Medium,63,19,3,20s,F,40,Sandwich+Coffee
+U145,3,Burger,Salad,35,2024-01-23 17:03:00,Snacks,Tuesday,5,250,Medium,98,19,9,20s,M,73,Sandwich+Coffee
+U178,22,Rajma Chawal,Special,50,2024-11-08 10:09:00,Breakfast,Friday,4,450,Medium,98,2,11,Teen,M,73,Pizza+ColdDrink
+U157,7,Chai,Beverages,15,2025-03-21 12:46:00,Lunch,Friday,3,80,Mild,64,16,3,30s,M,39,Pizza+ColdDrink
+U159,7,Chai,Beverages,15,2024-12-03 10:53:00,Breakfast,Tuesday,4,80,Mild,82,13,9,30s,M,45,Lassi+RajmaChawal
+U180,14,Bread Sandwich,Sandwich,24,2025-09-07 15:24:00,Snacks,Sunday,5,190,Mild,90,6,4,30s,F,20,Pizza+ColdDrink
+U184,14,Bread Sandwich,Sandwich,24,2024-06-02 16:38:00,Snacks,Sunday,4,190,Mild,59,10,3,20s,M,51,Maggi+Chai
+U101,9,Lassi,Beverages,25,2024-02-16 13:29:00,Lunch,Friday,4,200,Mild,94,20,9,Teen,M,44,Maggi+Chai
+U194,8,Cold drinks,Beverages,20,2024-07-29 10:24:00,Breakfast,Monday,5,160,Mild,75,14,15,30s,M,63,Chai+Samosa
+U187,13,Grilled Sandwich,Sandwich,40,2025-04-17 10:20:00,Breakfast,Thursday,3,230,Medium,56,7,10,30s,F,49,Sandwich+Coffee
+U186,18,Cheese Pizza,Pizza,65,2025-09-23 14:02:00,Lunch,Tuesday,3,400,Mild,95,6,5,20s,F,44,Pizza+ColdDrink
+U166,10,Coffee,Beverages,30,2025-08-01 09:52:00,Breakfast,Friday,5,100,Mild,64,18,15,30s,F,32,Lassi+RajmaChawal
+U164,16,Hakka Noodles,Noodles,45,2024-05-11 14:49:00,Lunch,Saturday,5,300,Spicy,86,8,12,30s,M,31,Lassi+RajmaChawal
+U198,14,Bread Sandwich,Sandwich,24,2024-05-11 14:57:00,Lunch,Saturday,4,190,Mild,84,4,5,30s,F,32,Chai+Samosa
+U114,12,Vegan Sandwich,Sandwich,35,2025-09-02 16:49:00,Snacks,Tuesday,3,200,Mild,95,10,15,Teen,M,72,Sandwich+Coffee
+U154,9,Lassi,Beverages,25,2024-10-04 08:12:00,Breakfast,Friday,5,200,Mild,66,5,5,Teen,F,61,Sandwich+Coffee
+U162,1,Chips,Snacks,20,2025-06-13 08:36:00,Breakfast,Friday,3,150,Mild,100,17,1,30s,F,22,Burger+Fries
+U139,8,Cold drinks,Beverages,20,2024-10-15 09:39:00,Breakfast,Tuesday,3,160,Mild,86,12,15,Teen,F,52,Pizza+ColdDrink
+U164,19,Tomato Pizza,Pizza,70,2024-10-23 15:22:00,Snacks,Wednesday,4,380,Medium,87,15,8,30s,F,43,Lassi+RajmaChawal
+U110,18,Cheese Pizza,Pizza,65,2025-06-16 12:11:00,Lunch,Monday,3,400,Mild,54,3,2,30s,F,80,Maggi+Chai
+U189,15,Veg Noodles,Noodles,40,2024-01-15 14:31:00,Lunch,Monday,5,280,Medium,54,12,1,20s,M,77,Pizza+ColdDrink
+U110,3,Burger,Salad,35,2024-09-03 13:57:00,Lunch,Tuesday,3,250,Medium,63,20,9,20s,F,68,Lassi+RajmaChawal
+U158,18,Cheese Pizza,Pizza,65,2024-03-31 10:32:00,Breakfast,Sunday,5,400,Mild,95,1,1,30s,F,71,Chai+Samosa
+U152,17,Fried Rice,Noodles,50,2024-06-04 11:49:00,Lunch,Tuesday,3,350,Medium,88,3,8,20s,M,50,Burger+Fries
+U177,11,Milkshake,Beverages,50,2024-01-30 11:59:00,Lunch,Tuesday,4,220,Mild,61,16,0,30s,F,73,Chai+Samosa
+U193,14,Bread Sandwich,Sandwich,24,2024-05-31 13:52:00,Lunch,Friday,3,190,Mild,50,5,11,30s,F,20,Maggi+Chai
+U139,3,Burger,Salad,35,2024-12-28 11:37:00,Lunch,Saturday,4,250,Medium,63,11,8,30s,F,73,Burger+Fries
+U194,14,Bread Sandwich,Sandwich,24,2025-05-30 09:47:00,Breakfast,Friday,3,190,Mild,81,1,14,20s,M,31,Pizza+ColdDrink
+U102,7,Chai,Beverages,15,2024-12-12 17:33:00,Snacks,Thursday,5,80,Mild,62,12,4,30s,F,66,Maggi+Chai
+U143,13,Grilled Sandwich,Sandwich,40,2025-02-23 14:57:00,Lunch,Sunday,4,230,Medium,51,10,11,30s,M,69,Burger+Fries
+U195,21,Chole Bature,Special,50,2025-04-28 12:30:00,Lunch,Monday,4,500,Medium,69,9,12,Teen,M,55,Pizza+ColdDrink
+U103,2,Samosa,Snacks,15,2024-09-05 10:25:00,Breakfast,Thursday,5,180,Spicy,98,10,14,20s,M,34,Pizza+ColdDrink
+U106,19,Tomato Pizza,Pizza,70,2025-08-04 13:13:00,Lunch,Monday,4,380,Medium,66,17,10,Teen,M,22,Pizza+ColdDrink
+U120,14,Bread Sandwich,Sandwich,24,2024-03-25 11:13:00,Lunch,Monday,5,190,Mild,95,12,12,30s,M,74,Chai+Samosa
+U116,23,Chole Chawal,Special,55,2024-06-09 17:13:00,Snacks,Sunday,3,470,Spicy,99,12,15,20s,F,38,Chai+Samosa
+U120,3,Burger,Salad,35,2024-05-20 09:08:00,Breakfast,Monday,3,250,Medium,65,8,4,30s,M,79,Maggi+Chai
+U197,15,Veg Noodles,Noodles,40,2024-04-07 10:07:00,Breakfast,Sunday,4,280,Medium,97,1,3,30s,F,41,Burger+Fries
+U108,16,Hakka Noodles,Noodles,45,2025-10-12 15:09:00,Snacks,Sunday,4,300,Spicy,84,3,3,30s,F,59,Pizza+ColdDrink
+U100,5,Maggi,Snacks,35,2025-09-08 12:29:00,Lunch,Monday,4,300,Medium,52,20,1,20s,M,25,Lassi+RajmaChawal
+U163,4,Hot Dog,Snacks,45,2025-03-20 09:26:00,Breakfast,Thursday,5,270,Spicy,97,14,3,20s,M,41,Maggi+Chai
+U168,6,Peri Peri Fries,Snacks,50,2024-10-29 12:15:00,Lunch,Tuesday,4,320,Spicy,60,1,0,30s,M,70,Burger+Fries
+U161,15,Veg Noodles,Noodles,40,2024-08-09 11:53:00,Lunch,Friday,5,280,Medium,55,7,0,20s,F,58,Maggi+Chai
+U169,13,Grilled Sandwich,Sandwich,40,2025-10-13 08:30:00,Breakfast,Monday,4,230,Medium,81,5,12,20s,F,20,Maggi+Chai
+U106,4,Hot Dog,Snacks,45,2025-03-04 13:08:00,Lunch,Tuesday,5,270,Spicy,61,3,10,20s,F,73,Chai+Samosa
+U139,24,Puri-Sabji,Special,40,2024-07-30 15:24:00,Snacks,Tuesday,3,400,Medium,61,13,10,Teen,M,45,Lassi+RajmaChawal
+U110,9,Lassi,Beverages,25,2025-07-28 09:59:00,Breakfast,Monday,5,200,Mild,80,6,10,Teen,M,43,Lassi+RajmaChawal
+U113,10,Coffee,Beverages,30,2025-05-12 11:11:00,Lunch,Monday,5,100,Mild,55,1,9,20s,F,72,Pizza+ColdDrink
+U183,6,Peri Peri Fries,Snacks,50,2024-03-15 17:26:00,Snacks,Friday,3,320,Spicy,81,13,15,30s,M,67,Lassi+RajmaChawal
+U168,6,Peri Peri Fries,Snacks,50,2024-11-29 16:04:00,Snacks,Friday,3,320,Spicy,61,9,3,20s,F,80,Maggi+Chai
+U149,21,Chole Bature,Special,50,2024-08-21 16:31:00,Snacks,Wednesday,5,500,Medium,71,1,11,Teen,F,76,Pizza+ColdDrink
+U162,17,Fried Rice,Noodles,50,2025-02-04 14:29:00,Lunch,Tuesday,3,350,Medium,91,3,10,30s,F,69,Maggi+Chai
+U134,18,Cheese Pizza,Pizza,65,2024-04-10 13:55:00,Lunch,Wednesday,3,400,Mild,75,9,10,20s,F,58,Chai+Samosa
+U154,12,Vegan Sandwich,Sandwich,35,2024-10-26 09:56:00,Breakfast,Saturday,3,200,Mild,65,1,11,30s,F,35,Burger+Fries
+U100,10,Coffee,Beverages,30,2024-01-20 11:24:00,Lunch,Saturday,5,100,Mild,95,12,1,30s,M,48,Pizza+ColdDrink
+U167,7,Chai,Beverages,15,2024-12-28 13:26:00,Lunch,Saturday,3,80,Mild,66,17,12,20s,F,64,Sandwich+Coffee
+U162,23,Chole Chawal,Special,55,2024-07-15 08:57:00,Breakfast,Monday,5,470,Spicy,90,11,1,30s,F,54,Lassi+RajmaChawal
+U108,2,Samosa,Snacks,15,2024-10-01 14:07:00,Lunch,Tuesday,5,180,Spicy,82,7,7,Teen,F,25,Pizza+ColdDrink
+U176,20,Corn Pizza,Pizza,75,2025-10-30 10:35:00,Breakfast,Thursday,5,420,Mild,50,6,9,Teen,M,66,Chai+Samosa
+U135,22,Rajma Chawal,Special,50,2024-11-14 17:30:00,Snacks,Thursday,5,450,Medium,60,6,8,30s,M,53,Maggi+Chai
+U171,4,Hot Dog,Snacks,45,2025-08-17 15:21:00,Snacks,Sunday,5,270,Spicy,100,15,3,30s,M,47,Pizza+ColdDrink
+U134,14,Bread Sandwich,Sandwich,24,2024-12-01 08:43:00,Breakfast,Sunday,5,190,Mild,77,16,11,30s,M,29,Maggi+Chai
+U160,15,Veg Noodles,Noodles,40,2025-06-20 12:28:00,Lunch,Friday,5,280,Medium,93,8,11,20s,F,69,Pizza+ColdDrink
+U136,12,Vegan Sandwich,Sandwich,35,2025-03-13 10:20:00,Breakfast,Thursday,5,200,Mild,55,11,1,30s,M,23,Lassi+RajmaChawal
+U158,7,Chai,Beverages,15,2025-09-13 17:32:00,Snacks,Saturday,5,80,Mild,74,10,7,20s,F,72,Pizza+ColdDrink
+U151,12,Vegan Sandwich,Sandwich,35,2025-06-18 13:37:00,Lunch,Wednesday,5,200,Mild,51,6,3,20s,F,21,Sandwich+Coffee
+U192,3,Burger,Salad,35,2024-03-28 11:22:00,Lunch,Thursday,3,250,Medium,83,3,8,20s,M,53,Lassi+RajmaChawal
+U103,21,Chole Bature,Special,50,2025-02-01 09:05:00,Breakfast,Saturday,4,500,Medium,87,14,8,30s,F,56,Lassi+RajmaChawal
+U145,11,Milkshake,Beverages,50,2024-04-06 09:08:00,Breakfast,Saturday,4,220,Mild,77,15,13,20s,M,34,Sandwich+Coffee
+U133,17,Fried Rice,Noodles,50,2025-06-21 14:40:00,Lunch,Saturday,4,350,Medium,55,6,13,Teen,F,65,Chai+Samosa
+U115,5,Maggi,Snacks,35,2025-01-05 11:17:00,Lunch,Sunday,4,300,Medium,56,19,7,20s,F,36,Pizza+ColdDrink
+U195,11,Milkshake,Beverages,50,2025-06-19 17:13:00,Snacks,Thursday,5,220,Mild,52,2,4,30s,F,66,Maggi+Chai
+U194,17,Fried Rice,Noodles,50,2024-11-24 13:29:00,Lunch,Sunday,5,350,Medium,73,11,5,20s,M,26,Pizza+ColdDrink
+U155,22,Rajma Chawal,Special,50,2024-08-02 12:36:00,Lunch,Friday,4,450,Medium,59,17,3,30s,M,78,Sandwich+Coffee
+U147,5,Maggi,Snacks,35,2025-08-29 14:29:00,Lunch,Friday,4,300,Medium,93,5,5,30s,F,43,Sandwich+Coffee
+U143,19,Tomato Pizza,Pizza,70,2025-05-29 08:07:00,Breakfast,Thursday,3,380,Medium,82,14,15,Teen,F,39,Pizza+ColdDrink
+U103,17,Fried Rice,Noodles,50,2025-02-24 13:05:00,Lunch,Monday,4,350,Medium,94,13,13,20s,M,32,Pizza+ColdDrink
+U166,23,Chole Chawal,Special,55,2024-10-07 13:54:00,Lunch,Monday,4,470,Spicy,97,2,7,Teen,F,58,Maggi+Chai
+U152,17,Fried Rice,Noodles,50,2025-01-07 17:00:00,Snacks,Tuesday,3,350,Medium,91,17,14,30s,F,58,Chai+Samosa
+U183,24,Puri-Sabji,Special,40,2024-08-23 12:39:00,Lunch,Friday,5,400,Medium,67,9,8,Teen,M,59,Sandwich+Coffee
+U166,7,Chai,Beverages,15,2024-12-24 08:58:00,Breakfast,Tuesday,5,80,Mild,55,9,9,30s,M,20,Maggi+Chai
+U195,9,Lassi,Beverages,25,2024-12-13 16:05:00,Snacks,Friday,3,200,Mild,82,16,7,Teen,M,73,Sandwich+Coffee
+U157,16,Hakka Noodles,Noodles,45,2024-04-23 14:14:00,Lunch,Tuesday,5,300,Spicy,69,14,15,20s,F,46,Sandwich+Coffee
+U138,18,Cheese Pizza,Pizza,65,2024-03-17 14:55:00,Lunch,Sunday,4,400,Mild,83,7,14,Teen,F,28,Pizza+ColdDrink
+U122,15,Veg Noodles,Noodles,40,2024-08-25 16:37:00,Snacks,Sunday,3,280,Medium,96,4,6,20s,F,35,Pizza+ColdDrink
+U140,24,Puri-Sabji,Special,40,2025-01-01 12:38:00,Lunch,Wednesday,4,400,Medium,90,20,12,Teen,F,64,Maggi+Chai
+U161,21,Chole Bature,Special,50,2024-01-14 08:54:00,Breakfast,Sunday,4,500,Medium,97,5,8,Teen,M,34,Maggi+Chai
+U114,6,Peri Peri Fries,Snacks,50,2025-06-05 15:22:00,Snacks,Thursday,4,320,Spicy,71,1,14,30s,M,58,Chai+Samosa
+U108,1,Chips,Snacks,20,2024-08-14 09:40:00,Breakfast,Wednesday,5,150,Mild,91,6,11,20s,M,65,Burger+Fries
+U128,3,Burger,Salad,35,2024-02-07 10:48:00,Breakfast,Wednesday,5,250,Medium,98,8,4,30s,F,28,Sandwich+Coffee
+U180,18,Cheese Pizza,Pizza,65,2025-01-15 17:31:00,Snacks,Wednesday,3,400,Mild,72,7,2,20s,F,57,Pizza+ColdDrink
+U197,23,Chole Chawal,Special,55,2024-06-18 08:17:00,Breakfast,Tuesday,5,470,Spicy,96,2,11,20s,M,36,Lassi+RajmaChawal
+U166,10,Coffee,Beverages,30,2024-11-26 17:32:00,Snacks,Tuesday,4,100,Mild,50,17,9,20s,M,49,Pizza+ColdDrink
+U102,22,Rajma Chawal,Special,50,2025-07-22 08:21:00,Breakfast,Tuesday,4,450,Medium,71,4,0,30s,M,35,Burger+Fries
+U163,4,Hot Dog,Snacks,45,2024-10-17 14:07:00,Lunch,Thursday,3,270,Spicy,71,4,12,Teen,F,62,Maggi+Chai
+U191,14,Bread Sandwich,Sandwich,24,2024-11-06 17:39:00,Snacks,Wednesday,5,190,Mild,94,20,14,20s,F,34,Lassi+RajmaChawal
+U148,23,Chole Chawal,Special,55,2025-01-27 10:59:00,Breakfast,Monday,4,470,Spicy,92,15,4,Teen,M,55,Maggi+Chai
+U162,6,Peri Peri Fries,Snacks,50,2025-10-11 16:47:00,Snacks,Saturday,4,320,Spicy,64,1,3,Teen,F,37,Burger+Fries
+U179,19,Tomato Pizza,Pizza,70,2024-10-31 16:45:00,Snacks,Thursday,3,380,Medium,85,15,13,Teen,F,57,Chai+Samosa
+U131,2,Samosa,Snacks,15,2024-09-26 09:00:00,Breakfast,Thursday,5,180,Spicy,90,10,1,20s,F,30,Maggi+Chai
+U100,1,Chips,Snacks,20,2025-06-18 10:59:00,Breakfast,Wednesday,4,150,Mild,89,12,15,Teen,F,80,Burger+Fries
+U133,14,Bread Sandwich,Sandwich,24,2025-10-29 14:13:00,Lunch,Wednesday,4,190,Mild,73,10,4,30s,F,22,Burger+Fries
+U155,18,Cheese Pizza,Pizza,65,2024-10-20 13:49:00,Lunch,Sunday,4,400,Mild,80,14,0,Teen,M,23,Pizza+ColdDrink
+U124,23,Chole Chawal,Special,55,2025-10-18 14:22:00,Lunch,Saturday,5,470,Spicy,51,14,2,20s,M,61,Burger+Fries
+U126,15,Veg Noodles,Noodles,40,2024-07-15 08:58:00,Breakfast,Monday,5,280,Medium,84,6,13,30s,M,73,Pizza+ColdDrink
+U106,8,Cold drinks,Beverages,20,2024-08-15 14:27:00,Lunch,Thursday,4,160,Mild,53,12,12,Teen,M,41,Lassi+RajmaChawal
+U174,5,Maggi,Snacks,35,2025-08-13 09:11:00,Breakfast,Wednesday,4,300,Medium,97,2,1,Teen,M,70,Sandwich+Coffee
+U156,6,Peri Peri Fries,Snacks,50,2024-05-15 14:53:00,Lunch,Wednesday,3,320,Spicy,61,13,3,20s,F,63,Lassi+RajmaChawal
+U130,7,Chai,Beverages,15,2025-06-07 15:49:00,Snacks,Saturday,5,80,Mild,88,12,13,30s,F,70,Chai+Samosa
+U119,21,Chole Bature,Special,50,2025-09-22 17:16:00,Snacks,Monday,3,500,Medium,76,20,5,Teen,M,55,Sandwich+Coffee
+U199,6,Peri Peri Fries,Snacks,50,2025-10-31 08:02:00,Breakfast,Friday,4,320,Spicy,81,7,7,Teen,M,26,Sandwich+Coffee
+U192,3,Burger,Salad,35,2024-11-22 08:48:00,Breakfast,Friday,4,250,Medium,59,15,4,Teen,F,26,Maggi+Chai
+U183,10,Coffee,Beverages,30,2025-04-02 14:45:00,Lunch,Wednesday,4,100,Mild,74,14,2,30s,M,50,Burger+Fries
+U138,17,Fried Rice,Noodles,50,2024-12-25 12:44:00,Lunch,Wednesday,4,350,Medium,73,20,15,Teen,M,42,Maggi+Chai
+U182,11,Milkshake,Beverages,50,2025-01-10 16:42:00,Snacks,Friday,5,220,Mild,96,12,1,30s,M,53,Burger+Fries
+U135,20,Corn Pizza,Pizza,75,2025-01-27 15:53:00,Snacks,Monday,5,420,Mild,75,3,1,Teen,M,62,Sandwich+Coffee
+U129,22,Rajma Chawal,Special,50,2025-01-05 12:28:00,Lunch,Sunday,4,450,Medium,65,11,14,Teen,M,61,Lassi+RajmaChawal
+U102,1,Chips,Snacks,20,2025-09-11 12:04:00,Lunch,Thursday,3,150,Mild,95,6,5,20s,F,77,Lassi+RajmaChawal
+U154,16,Hakka Noodles,Noodles,45,2025-03-03 13:52:00,Lunch,Monday,3,300,Spicy,54,2,7,Teen,F,45,Lassi+RajmaChawal
+U165,20,Corn Pizza,Pizza,75,2024-01-01 12:02:00,Lunch,Monday,4,420,Mild,53,1,1,30s,F,41,Burger+Fries
+U137,6,Peri Peri Fries,Snacks,50,2025-01-18 14:05:00,Lunch,Saturday,5,320,Spicy,65,7,8,20s,F,76,Chai+Samosa
+U159,1,Chips,Snacks,20,2024-12-14 12:08:00,Lunch,Saturday,3,150,Mild,71,11,9,30s,M,28,Maggi+Chai
+U132,16,Hakka Noodles,Noodles,45,2024-12-11 09:21:00,Breakfast,Wednesday,5,300,Spicy,96,5,1,30s,M,69,Chai+Samosa
+U145,4,Hot Dog,Snacks,45,2024-06-23 17:49:00,Snacks,Sunday,4,270,Spicy,99,14,14,20s,F,58,Lassi+RajmaChawal
+U118,6,Peri Peri Fries,Snacks,50,2024-10-28 16:07:00,Snacks,Monday,5,320,Spicy,81,18,5,20s,M,30,Sandwich+Coffee
+U188,10,Coffee,Beverages,30,2024-06-05 14:13:00,Lunch,Wednesday,5,100,Mild,88,19,12,20s,M,35,Pizza+ColdDrink
+U123,2,Samosa,Snacks,15,2024-04-21 14:01:00,Lunch,Sunday,5,180,Spicy,71,15,4,30s,M,69,Burger+Fries
+U145,10,Coffee,Beverages,30,2024-11-27 14:49:00,Lunch,Wednesday,3,100,Mild,89,15,1,Teen,M,22,Maggi+Chai
+U142,17,Fried Rice,Noodles,50,2024-06-21 11:44:00,Lunch,Friday,5,350,Medium,62,17,5,Teen,M,48,Burger+Fries
+U127,5,Maggi,Snacks,35,2024-06-24 11:00:00,Lunch,Monday,3,300,Medium,69,18,4,30s,F,35,Sandwich+Coffee
+U132,19,Tomato Pizza,Pizza,70,2025-07-20 10:50:00,Breakfast,Sunday,4,380,Medium,69,20,1,Teen,F,62,Chai+Samosa
+U191,23,Chole Chawal,Special,55,2024-02-09 12:56:00,Lunch,Friday,3,470,Spicy,95,2,9,30s,F,50,Pizza+ColdDrink
+U138,2,Samosa,Snacks,15,2024-04-25 13:17:00,Lunch,Thursday,4,180,Spicy,54,17,7,30s,F,54,Sandwich+Coffee
+U145,10,Coffee,Beverages,30,2025-07-24 12:24:00,Lunch,Thursday,4,100,Mild,86,15,3,Teen,F,54,Lassi+RajmaChawal
+U152,14,Bread Sandwich,Sandwich,24,2025-09-29 10:48:00,Breakfast,Monday,4,190,Mild,84,2,0,20s,F,70,Chai+Samosa
+U135,22,Rajma Chawal,Special,50,2025-01-22 16:58:00,Snacks,Wednesday,4,450,Medium,72,1,8,30s,M,62,Maggi+Chai
+U178,9,Lassi,Beverages,25,2025-03-03 11:32:00,Lunch,Monday,4,200,Mild,74,6,15,Teen,M,58,Sandwich+Coffee
+U172,12,Vegan Sandwich,Sandwich,35,2025-02-06 11:18:00,Lunch,Thursday,4,200,Mild,61,6,12,20s,M,70,Maggi+Chai
+U166,22,Rajma Chawal,Special,50,2025-02-10 11:58:00,Lunch,Monday,3,450,Medium,77,20,1,Teen,M,79,Sandwich+Coffee
+U156,19,Tomato Pizza,Pizza,70,2024-03-02 15:35:00,Snacks,Saturday,5,380,Medium,75,13,0,30s,M,35,Chai+Samosa
+U140,3,Burger,Salad,35,2024-02-16 17:23:00,Snacks,Friday,5,250,Medium,69,9,2,30s,M,51,Burger+Fries
+U139,24,Puri-Sabji,Special,40,2025-05-01 10:40:00,Breakfast,Thursday,4,400,Medium,98,13,10,Teen,F,34,Lassi+RajmaChawal
+U128,10,Coffee,Beverages,30,2024-05-11 13:31:00,Lunch,Saturday,5,100,Mild,64,19,15,30s,F,66,Sandwich+Coffee
+U120,17,Fried Rice,Noodles,50,2024-11-22 11:56:00,Lunch,Friday,3,350,Medium,60,19,10,Teen,F,23,Burger+Fries
+U145,11,Milkshake,Beverages,50,2024-11-27 08:48:00,Breakfast,Wednesday,5,220,Mild,98,12,15,20s,F,49,Lassi+RajmaChawal
+U190,11,Milkshake,Beverages,50,2025-09-25 11:23:00,Lunch,Thursday,4,220,Mild,100,14,5,30s,F,46,Chai+Samosa
+U193,16,Hakka Noodles,Noodles,45,2025-05-31 17:53:00,Snacks,Saturday,4,300,Spicy,68,14,11,Teen,M,25,Burger+Fries
+U158,2,Samosa,Snacks,15,2024-09-12 15:33:00,Snacks,Thursday,3,180,Spicy,57,16,7,30s,M,24,Maggi+Chai
+U124,23,Chole Chawal,Special,55,2025-06-22 11:21:00,Lunch,Sunday,3,470,Spicy,78,11,15,30s,M,50,Sandwich+Coffee
+U149,11,Milkshake,Beverages,50,2024-04-06 13:36:00,Lunch,Saturday,4,220,Mild,96,2,13,Teen,F,62,Sandwich+Coffee
+U182,10,Coffee,Beverages,30,2024-11-23 15:18:00,Snacks,Saturday,3,100,Mild,80,9,11,30s,F,50,Sandwich+Coffee
+U110,11,Milkshake,Beverages,50,2024-07-16 17:55:00,Snacks,Tuesday,5,220,Mild,65,19,14,Teen,M,34,Burger+Fries
+U175,3,Burger,Salad,35,2025-10-18 15:05:00,Snacks,Saturday,4,250,Medium,97,3,10,Teen,M,75,Chai+Samosa
+U131,8,Cold drinks,Beverages,20,2024-09-27 11:09:00,Lunch,Friday,3,160,Mild,85,18,2,20s,M,61,Pizza+ColdDrink
+U118,2,Samosa,Snacks,15,2024-09-26 16:59:00,Snacks,Thursday,5,180,Spicy,60,15,3,Teen,M,71,Maggi+Chai
+U102,16,Hakka Noodles,Noodles,45,2024-12-13 13:55:00,Lunch,Friday,5,300,Spicy,60,2,12,30s,M,54,Burger+Fries
+U151,19,Tomato Pizza,Pizza,70,2024-12-25 12:49:00,Lunch,Wednesday,5,380,Medium,96,19,11,30s,M,33,Sandwich+Coffee
+U170,18,Cheese Pizza,Pizza,65,2024-12-19 10:28:00,Breakfast,Thursday,4,400,Mild,50,18,6,20s,M,52,Lassi+RajmaChawal
+U187,4,Hot Dog,Snacks,45,2025-10-19 14:06:00,Lunch,Sunday,3,270,Spicy,63,11,5,Teen,F,26,Sandwich+Coffee
+U112,6,Peri Peri Fries,Snacks,50,2024-06-18 08:58:00,Breakfast,Tuesday,5,320,Spicy,89,10,4,Teen,F,80,Sandwich+Coffee
+U139,2,Samosa,Snacks,15,2024-01-31 08:32:00,Breakfast,Wednesday,5,180,Spicy,94,16,15,20s,M,53,Sandwich+Coffee
+U182,11,Milkshake,Beverages,50,2024-04-25 16:49:00,Snacks,Thursday,4,220,Mild,78,19,1,Teen,M,56,Sandwich+Coffee
+U197,11,Milkshake,Beverages,50,2025-07-04 08:35:00,Breakfast,Friday,4,220,Mild,52,4,5,Teen,F,49,Sandwich+Coffee
+U111,16,Hakka Noodles,Noodles,45,2025-02-17 15:31:00,Snacks,Monday,3,300,Spicy,73,3,4,20s,M,52,Maggi+Chai
+U114,8,Cold drinks,Beverages,20,2024-07-04 10:33:00,Breakfast,Thursday,3,160,Mild,92,10,2,Teen,M,58,Pizza+ColdDrink
+U134,19,Tomato Pizza,Pizza,70,2024-07-21 17:06:00,Snacks,Sunday,5,380,Medium,59,17,8,30s,M,66,Lassi+RajmaChawal
+U121,23,Chole Chawal,Special,55,2025-04-17 17:32:00,Snacks,Thursday,4,470,Spicy,89,12,1,20s,M,20,Sandwich+Coffee
+U135,8,Cold drinks,Beverages,20,2024-01-25 09:32:00,Breakfast,Thursday,4,160,Mild,67,2,8,20s,F,55,Burger+Fries
+U198,24,Puri-Sabji,Special,40,2024-11-06 08:27:00,Breakfast,Wednesday,4,400,Medium,70,13,5,30s,F,66,Pizza+ColdDrink
+U140,6,Peri Peri Fries,Snacks,50,2024-10-13 14:14:00,Lunch,Sunday,4,320,Spicy,72,19,15,Teen,M,31,Maggi+Chai
+U154,11,Milkshake,Beverages,50,2025-04-18 08:05:00,Breakfast,Friday,4,220,Mild,70,19,12,20s,F,55,Pizza+ColdDrink
+U175,22,Rajma Chawal,Special,50,2025-01-30 14:47:00,Lunch,Thursday,4,450,Medium,56,7,1,30s,F,41,Pizza+ColdDrink
+U137,2,Samosa,Snacks,15,2024-03-23 17:19:00,Snacks,Saturday,5,180,Spicy,93,11,3,30s,M,26,Sandwich+Coffee
+U150,22,Rajma Chawal,Special,50,2025-08-10 11:57:00,Lunch,Sunday,5,450,Medium,56,17,11,20s,F,24,Burger+Fries
+U169,16,Hakka Noodles,Noodles,45,2025-09-16 10:01:00,Breakfast,Tuesday,4,300,Spicy,57,13,6,Teen,M,26,Pizza+ColdDrink
+U195,18,Cheese Pizza,Pizza,65,2025-02-23 08:47:00,Breakfast,Sunday,4,400,Mild,54,3,9,20s,F,66,Sandwich+Coffee
+U192,8,Cold drinks,Beverages,20,2025-01-15 16:01:00,Snacks,Wednesday,5,160,Mild,74,14,14,Teen,F,56,Lassi+RajmaChawal
+U178,13,Grilled Sandwich,Sandwich,40,2024-01-12 12:41:00,Lunch,Friday,5,230,Medium,85,18,5,Teen,F,23,Sandwich+Coffee
+U133,10,Coffee,Beverages,30,2024-12-24 09:33:00,Breakfast,Tuesday,5,100,Mild,68,7,14,Teen,F,62,Chai+Samosa
+U165,10,Coffee,Beverages,30,2025-03-19 11:17:00,Lunch,Wednesday,4,100,Mild,62,3,5,20s,F,27,Pizza+ColdDrink
+U148,4,Hot Dog,Snacks,45,2024-08-18 12:37:00,Lunch,Sunday,4,270,Spicy,73,3,14,20s,M,80,Chai+Samosa
+U138,11,Milkshake,Beverages,50,2024-02-23 17:49:00,Snacks,Friday,3,220,Mild,83,12,15,20s,M,78,Lassi+RajmaChawal
+U180,19,Tomato Pizza,Pizza,70,2025-10-14 16:06:00,Snacks,Tuesday,3,380,Medium,86,12,7,20s,F,57,Chai+Samosa
+U183,10,Coffee,Beverages,30,2025-08-27 14:01:00,Lunch,Wednesday,3,100,Mild,90,18,1,20s,M,58,Lassi+RajmaChawal
+U111,16,Hakka Noodles,Noodles,45,2024-09-27 15:26:00,Snacks,Friday,4,300,Spicy,81,10,9,Teen,F,22,Lassi+RajmaChawal
+U139,9,Lassi,Beverages,25,2025-04-21 12:28:00,Lunch,Monday,4,200,Mild,96,16,2,30s,F,20,Maggi+Chai
+U116,3,Burger,Salad,35,2024-01-07 14:25:00,Lunch,Sunday,5,250,Medium,83,9,5,Teen,M,58,Maggi+Chai
+U128,16,Hakka Noodles,Noodles,45,2024-05-27 09:33:00,Breakfast,Monday,5,300,Spicy,56,19,7,20s,M,73,Burger+Fries
+U128,13,Grilled Sandwich,Sandwich,40,2025-03-24 12:45:00,Lunch,Monday,5,230,Medium,98,4,5,20s,M,60,Maggi+Chai
+U181,1,Chips,Snacks,20,2025-06-11 17:32:00,Snacks,Wednesday,3,150,Mild,89,18,4,Teen,F,53,Pizza+ColdDrink
+U135,16,Hakka Noodles,Noodles,45,2024-08-21 17:57:00,Snacks,Wednesday,5,300,Spicy,84,8,15,30s,F,74,Lassi+RajmaChawal
+U188,4,Hot Dog,Snacks,45,2025-10-13 11:10:00,Lunch,Monday,4,270,Spicy,73,10,15,30s,F,36,Maggi+Chai
+U173,2,Samosa,Snacks,15,2025-09-13 08:22:00,Breakfast,Saturday,5,180,Spicy,58,2,12,Teen,M,66,Sandwich+Coffee
+U139,15,Veg Noodles,Noodles,40,2024-04-20 16:09:00,Snacks,Saturday,3,280,Medium,98,2,1,20s,M,35,Lassi+RajmaChawal
+U174,17,Fried Rice,Noodles,50,2025-09-12 08:41:00,Breakfast,Friday,3,350,Medium,87,19,1,20s,F,71,Lassi+RajmaChawal
+U126,17,Fried Rice,Noodles,50,2024-03-06 08:12:00,Breakfast,Wednesday,4,350,Medium,93,11,8,30s,M,27,Burger+Fries
+U166,20,Corn Pizza,Pizza,75,2024-08-17 11:29:00,Lunch,Saturday,3,420,Mild,66,7,11,Teen,F,24,Lassi+RajmaChawal
+U121,18,Cheese Pizza,Pizza,65,2024-09-04 10:47:00,Breakfast,Wednesday,5,400,Mild,73,5,0,20s,F,44,Lassi+RajmaChawal
+U184,21,Chole Bature,Special,50,2024-09-03 08:19:00,Breakfast,Tuesday,3,500,Medium,63,7,1,30s,M,22,Sandwich+Coffee
+U153,22,Rajma Chawal,Special,50,2025-04-14 13:10:00,Lunch,Monday,5,450,Medium,67,4,2,Teen,F,37,Lassi+RajmaChawal
+U117,18,Cheese Pizza,Pizza,65,2025-08-26 15:02:00,Snacks,Tuesday,4,400,Mild,90,4,12,30s,F,33,Chai+Samosa
+U162,7,Chai,Beverages,15,2024-03-30 09:21:00,Breakfast,Saturday,4,80,Mild,100,1,11,30s,M,62,Maggi+Chai
+U177,2,Samosa,Snacks,15,2024-04-15 14:22:00,Lunch,Monday,5,180,Spicy,83,14,7,Teen,M,37,Lassi+RajmaChawal
+U198,13,Grilled Sandwich,Sandwich,40,2025-10-12 08:41:00,Breakfast,Sunday,5,230,Medium,58,4,12,30s,M,61,Burger+Fries
+U109,6,Peri Peri Fries,Snacks,50,2024-08-29 14:17:00,Lunch,Thursday,4,320,Spicy,61,6,0,20s,F,21,Lassi+RajmaChawal
+U190,11,Milkshake,Beverages,50,2025-08-06 12:46:00,Lunch,Wednesday,3,220,Mild,82,9,3,Teen,M,38,Pizza+ColdDrink
+U157,21,Chole Bature,Special,50,2025-03-06 12:47:00,Lunch,Thursday,3,500,Medium,68,7,0,30s,F,32,Chai+Samosa
+U186,18,Cheese Pizza,Pizza,65,2025-10-27 15:23:00,Snacks,Monday,3,400,Mild,90,4,5,Teen,M,60,Pizza+ColdDrink
+U111,21,Chole Bature,Special,50,2024-10-08 13:46:00,Lunch,Tuesday,5,500,Medium,70,12,15,20s,F,32,Sandwich+Coffee
+U124,1,Chips,Snacks,20,2025-04-03 16:06:00,Snacks,Thursday,4,150,Mild,55,15,7,30s,F,34,Burger+Fries
+U113,9,Lassi,Beverages,25,2025-09-22 09:58:00,Breakfast,Monday,4,200,Mild,72,4,3,Teen,F,38,Chai+Samosa
+U119,24,Puri-Sabji,Special,40,2025-03-29 15:49:00,Snacks,Saturday,4,400,Medium,97,7,15,30s,F,33,Sandwich+Coffee
+U168,1,Chips,Snacks,20,2024-09-24 11:28:00,Lunch,Tuesday,4,150,Mild,63,4,11,30s,M,60,Burger+Fries
+U145,10,Coffee,Beverages,30,2024-04-21 10:22:00,Breakfast,Sunday,5,100,Mild,57,3,14,Teen,F,71,Chai+Samosa
+U158,4,Hot Dog,Snacks,45,2025-02-11 13:08:00,Lunch,Tuesday,4,270,Spicy,83,12,11,Teen,F,50,Maggi+Chai
+U110,2,Samosa,Snacks,15,2025-10-15 09:07:00,Breakfast,Wednesday,5,180,Spicy,86,16,4,30s,M,23,Maggi+Chai
+U129,15,Veg Noodles,Noodles,40,2024-10-17 11:14:00,Lunch,Thursday,4,280,Medium,61,20,12,20s,F,74,Burger+Fries
+U192,4,Hot Dog,Snacks,45,2025-01-07 16:13:00,Snacks,Tuesday,5,270,Spicy,86,20,15,20s,F,46,Chai+Samosa
+U150,21,Chole Bature,Special,50,2024-10-23 14:50:00,Lunch,Wednesday,5,500,Medium,90,7,3,Teen,F,64,Pizza+ColdDrink
+U197,11,Milkshake,Beverages,50,2024-05-16 17:36:00,Snacks,Thursday,4,220,Mild,70,8,0,20s,M,37,Lassi+RajmaChawal
+U161,19,Tomato Pizza,Pizza,70,2025-03-11 14:23:00,Lunch,Tuesday,4,380,Medium,75,7,6,Teen,F,65,Lassi+RajmaChawal
+U167,10,Coffee,Beverages,30,2024-09-23 16:34:00,Snacks,Monday,4,100,Mild,78,1,9,20s,F,78,Chai+Samosa
+U145,2,Samosa,Snacks,15,2024-06-14 09:49:00,Breakfast,Friday,3,180,Spicy,55,18,3,Teen,F,53,Chai+Samosa
+U114,7,Chai,Beverages,15,2024-02-07 08:21:00,Breakfast,Wednesday,3,80,Mild,57,1,14,20s,F,47,Chai+Samosa
+U169,17,Fried Rice,Noodles,50,2024-11-28 16:18:00,Snacks,Thursday,5,350,Medium,100,11,7,30s,M,49,Burger+Fries
+U177,4,Hot Dog,Snacks,45,2024-10-21 11:18:00,Lunch,Monday,4,270,Spicy,72,8,0,30s,M,72,Pizza+ColdDrink
+U118,1,Chips,Snacks,20,2024-06-10 11:04:00,Lunch,Monday,4,150,Mild,70,15,1,Teen,F,41,Burger+Fries
+U150,4,Hot Dog,Snacks,45,2025-03-29 15:22:00,Snacks,Saturday,4,270,Spicy,82,16,2,20s,F,27,Maggi+Chai
+U195,23,Chole Chawal,Special,55,2025-07-30 12:55:00,Lunch,Wednesday,4,470,Spicy,51,10,8,30s,M,28,Chai+Samosa
+U150,5,Maggi,Snacks,35,2025-06-28 16:04:00,Snacks,Saturday,5,300,Medium,60,18,1,30s,M,36,Sandwich+Coffee
+U160,16,Hakka Noodles,Noodles,45,2025-03-16 09:24:00,Breakfast,Sunday,3,300,Spicy,57,17,12,Teen,M,57,Chai+Samosa
+U173,8,Cold drinks,Beverages,20,2025-04-12 10:33:00,Breakfast,Saturday,4,160,Mild,51,20,1,20s,M,51,Burger+Fries
+U157,18,Cheese Pizza,Pizza,65,2025-08-06 11:51:00,Lunch,Wednesday,5,400,Mild,94,18,1,30s,M,66,Chai+Samosa
+U178,20,Corn Pizza,Pizza,75,2025-01-23 10:51:00,Breakfast,Thursday,3,420,Mild,98,8,7,30s,F,36,Lassi+RajmaChawal
+U194,11,Milkshake,Beverages,50,2024-10-21 15:51:00,Snacks,Monday,4,220,Mild,82,15,9,20s,F,37,Pizza+ColdDrink
+U103,24,Puri-Sabji,Special,40,2024-10-25 16:56:00,Snacks,Friday,5,400,Medium,87,20,12,30s,M,38,Pizza+ColdDrink
+U183,22,Rajma Chawal,Special,50,2024-07-11 09:55:00,Breakfast,Thursday,4,450,Medium,69,14,12,30s,M,74,Chai+Samosa
+U172,10,Coffee,Beverages,30,2024-04-19 12:10:00,Lunch,Friday,4,100,Mild,84,3,6,20s,M,59,Pizza+ColdDrink
+U136,1,Chips,Snacks,20,2025-07-28 11:31:00,Lunch,Monday,5,150,Mild,54,18,1,Teen,M,76,Pizza+ColdDrink
+U170,8,Cold drinks,Beverages,20,2024-09-08 13:15:00,Lunch,Sunday,3,160,Mild,89,20,13,30s,F,60,Burger+Fries
+U192,5,Maggi,Snacks,35,2025-07-11 12:54:00,Lunch,Friday,5,300,Medium,62,12,10,30s,F,74,Maggi+Chai
+U193,6,Peri Peri Fries,Snacks,50,2024-03-31 14:11:00,Lunch,Sunday,5,320,Spicy,92,19,3,Teen,F,41,Burger+Fries
+U173,24,Puri-Sabji,Special,40,2024-10-06 09:24:00,Breakfast,Sunday,5,400,Medium,90,19,8,Teen,F,57,Burger+Fries
+U179,14,Bread Sandwich,Sandwich,24,2025-07-02 16:45:00,Snacks,Wednesday,4,190,Mild,87,10,8,20s,F,39,Sandwich+Coffee
+U161,3,Burger,Salad,35,2024-12-04 14:57:00,Lunch,Wednesday,3,250,Medium,86,9,8,30s,M,64,Burger+Fries
+U182,16,Hakka Noodles,Noodles,45,2024-09-11 15:09:00,Snacks,Wednesday,3,300,Spicy,52,20,11,30s,F,65,Lassi+RajmaChawal
+U128,7,Chai,Beverages,15,2025-09-14 13:06:00,Lunch,Sunday,4,80,Mild,95,11,7,30s,M,62,Lassi+RajmaChawal
+U195,14,Bread Sandwich,Sandwich,24,2025-06-25 08:47:00,Breakfast,Wednesday,4,190,Mild,95,14,10,Teen,M,41,Maggi+Chai
+U159,15,Veg Noodles,Noodles,40,2024-08-30 11:32:00,Lunch,Friday,3,280,Medium,50,20,12,Teen,F,57,Pizza+ColdDrink
+U187,16,Hakka Noodles,Noodles,45,2024-04-27 14:08:00,Lunch,Saturday,5,300,Spicy,89,18,6,Teen,F,49,Sandwich+Coffee
+U158,20,Corn Pizza,Pizza,75,2024-12-06 10:04:00,Breakfast,Friday,5,420,Mild,92,15,12,30s,M,69,Chai+Samosa
+U114,14,Bread Sandwich,Sandwich,24,2025-05-14 12:05:00,Lunch,Wednesday,3,190,Mild,73,12,10,20s,M,74,Burger+Fries
+U103,22,Rajma Chawal,Special,50,2025-01-06 13:54:00,Lunch,Monday,4,450,Medium,95,15,5,30s,M,63,Chai+Samosa
+U192,19,Tomato Pizza,Pizza,70,2024-12-26 08:29:00,Breakfast,Thursday,5,380,Medium,65,5,8,20s,F,48,Chai+Samosa
+U199,21,Chole Bature,Special,50,2024-07-02 10:26:00,Breakfast,Tuesday,3,500,Medium,80,3,3,Teen,F,33,Maggi+Chai
+U142,10,Coffee,Beverages,30,2025-08-31 17:28:00,Snacks,Sunday,5,100,Mild,91,13,1,30s,F,40,Maggi+Chai
+U112,10,Coffee,Beverages,30,2025-02-02 14:24:00,Lunch,Sunday,3,100,Mild,95,17,1,20s,M,61,Lassi+RajmaChawal
+U104,20,Corn Pizza,Pizza,75,2025-05-20 15:43:00,Snacks,Tuesday,5,420,Mild,98,15,10,30s,F,22,Sandwich+Coffee
+U158,14,Bread Sandwich,Sandwich,24,2024-08-18 08:46:00,Breakfast,Sunday,4,190,Mild,61,17,12,Teen,F,69,Sandwich+Coffee
+U191,17,Fried Rice,Noodles,50,2025-07-27 12:56:00,Lunch,Sunday,3,350,Medium,60,7,4,20s,F,72,Burger+Fries
+U161,2,Samosa,Snacks,15,2024-06-05 17:14:00,Snacks,Wednesday,3,180,Spicy,55,18,4,Teen,M,56,Lassi+RajmaChawal
+U179,16,Hakka Noodles,Noodles,45,2024-12-24 11:16:00,Lunch,Tuesday,4,300,Spicy,82,20,8,20s,F,29,Sandwich+Coffee
+U175,12,Vegan Sandwich,Sandwich,35,2024-08-26 16:35:00,Snacks,Monday,4,200,Mild,71,4,15,20s,M,37,Burger+Fries
+U180,5,Maggi,Snacks,35,2025-07-04 08:15:00,Breakfast,Friday,3,300,Medium,70,14,7,20s,M,74,Sandwich+Coffee
+U190,2,Samosa,Snacks,15,2025-01-07 10:53:00,Breakfast,Tuesday,5,180,Spicy,88,7,14,Teen,F,36,Pizza+ColdDrink
+U159,7,Chai,Beverages,15,2024-05-29 12:55:00,Lunch,Wednesday,3,80,Mild,61,20,13,Teen,M,23,Lassi+RajmaChawal
+U144,9,Lassi,Beverages,25,2024-07-11 11:04:00,Lunch,Thursday,4,200,Mild,67,5,15,20s,M,71,Pizza+ColdDrink
+U130,4,Hot Dog,Snacks,45,2024-07-01 16:15:00,Snacks,Monday,5,270,Spicy,84,7,13,20s,F,64,Sandwich+Coffee
+U169,11,Milkshake,Beverages,50,2024-09-24 16:32:00,Snacks,Tuesday,4,220,Mild,89,5,12,30s,F,80,Lassi+RajmaChawal
+U189,15,Veg Noodles,Noodles,40,2025-07-20 16:30:00,Snacks,Sunday,4,280,Medium,62,13,1,30s,M,68,Lassi+RajmaChawal
+U187,2,Samosa,Snacks,15,2025-01-08 14:37:00,Lunch,Wednesday,5,180,Spicy,51,15,1,30s,F,53,Sandwich+Coffee
+U128,22,Rajma Chawal,Special,50,2025-01-25 17:05:00,Snacks,Saturday,3,450,Medium,95,7,5,20s,F,68,Burger+Fries
+U160,24,Puri-Sabji,Special,40,2024-08-11 13:39:00,Lunch,Sunday,3,400,Medium,80,1,2,20s,M,66,Lassi+RajmaChawal
+U197,22,Rajma Chawal,Special,50,2025-03-25 13:51:00,Lunch,Tuesday,5,450,Medium,84,18,0,Teen,M,37,Pizza+ColdDrink
+U163,12,Vegan Sandwich,Sandwich,35,2025-10-29 16:27:00,Snacks,Wednesday,5,200,Mild,51,6,9,30s,F,63,Lassi+RajmaChawal
+U131,22,Rajma Chawal,Special,50,2025-04-23 09:07:00,Breakfast,Wednesday,3,450,Medium,73,11,4,30s,M,73,Pizza+ColdDrink
+U177,22,Rajma Chawal,Special,50,2024-06-03 11:39:00,Lunch,Monday,4,450,Medium,80,16,1,20s,F,45,Lassi+RajmaChawal
+U151,4,Hot Dog,Snacks,45,2024-12-27 14:44:00,Lunch,Friday,3,270,Spicy,76,9,7,Teen,M,78,Lassi+RajmaChawal
+U110,21,Chole Bature,Special,50,2025-06-07 15:59:00,Snacks,Saturday,5,500,Medium,85,10,7,20s,M,27,Pizza+ColdDrink
+U195,11,Milkshake,Beverages,50,2025-05-05 09:53:00,Breakfast,Monday,3,220,Mild,80,16,9,20s,M,54,Pizza+ColdDrink
+U127,17,Fried Rice,Noodles,50,2025-06-07 16:46:00,Snacks,Saturday,5,350,Medium,81,6,0,20s,M,47,Burger+Fries
+U151,15,Veg Noodles,Noodles,40,2024-10-19 11:56:00,Lunch,Saturday,3,280,Medium,84,7,10,30s,F,73,Pizza+ColdDrink
+U186,22,Rajma Chawal,Special,50,2025-10-19 09:53:00,Breakfast,Sunday,4,450,Medium,71,10,2,30s,M,32,Maggi+Chai
+U148,13,Grilled Sandwich,Sandwich,40,2024-02-18 08:49:00,Breakfast,Sunday,5,230,Medium,99,4,5,Teen,M,30,Chai+Samosa
+U127,12,Vegan Sandwich,Sandwich,35,2024-10-23 10:29:00,Breakfast,Wednesday,3,200,Mild,80,2,11,Teen,M,60,Sandwich+Coffee
+U196,21,Chole Bature,Special,50,2025-04-02 14:05:00,Lunch,Wednesday,3,500,Medium,93,1,12,30s,F,74,Sandwich+Coffee
+U165,20,Corn Pizza,Pizza,75,2025-10-31 10:28:00,Breakfast,Friday,5,420,Mild,57,6,6,20s,F,28,Sandwich+Coffee
+U105,17,Fried Rice,Noodles,50,2024-03-10 13:44:00,Lunch,Sunday,3,350,Medium,81,12,4,Teen,F,37,Sandwich+Coffee
+U196,23,Chole Chawal,Special,55,2025-05-16 14:41:00,Lunch,Friday,4,470,Spicy,72,4,5,30s,M,31,Lassi+RajmaChawal
+U110,4,Hot Dog,Snacks,45,2025-06-03 16:29:00,Snacks,Tuesday,4,270,Spicy,96,14,2,Teen,F,39,Maggi+Chai
+U145,18,Cheese Pizza,Pizza,65,2024-03-05 10:40:00,Breakfast,Tuesday,3,400,Mild,69,5,0,20s,F,75,Sandwich+Coffee
+U112,21,Chole Bature,Special,50,2024-01-04 15:39:00,Snacks,Thursday,4,500,Medium,69,7,5,Teen,F,41,Sandwich+Coffee
+U174,3,Burger,Salad,35,2024-10-04 12:19:00,Lunch,Friday,3,250,Medium,86,17,12,Teen,M,33,Lassi+RajmaChawal
+U168,11,Milkshake,Beverages,50,2025-10-29 10:08:00,Breakfast,Wednesday,5,220,Mild,82,6,1,Teen,F,68,Sandwich+Coffee
+U165,24,Puri-Sabji,Special,40,2025-05-30 08:18:00,Breakfast,Friday,5,400,Medium,52,3,5,20s,F,26,Burger+Fries
+U149,2,Samosa,Snacks,15,2025-03-24 14:53:00,Lunch,Monday,5,180,Spicy,94,13,13,20s,M,45,Pizza+ColdDrink
+U122,1,Chips,Snacks,20,2025-09-02 09:43:00,Breakfast,Tuesday,4,150,Mild,71,19,15,20s,F,80,Pizza+ColdDrink
+U154,9,Lassi,Beverages,25,2024-06-22 16:27:00,Snacks,Saturday,5,200,Mild,92,2,7,20s,M,64,Sandwich+Coffee
+U144,12,Vegan Sandwich,Sandwich,35,2024-03-02 09:46:00,Breakfast,Saturday,3,200,Mild,87,13,3,20s,M,58,Sandwich+Coffee
+U126,12,Vegan Sandwich,Sandwich,35,2024-11-26 09:44:00,Breakfast,Tuesday,4,200,Mild,64,20,3,Teen,F,72,Maggi+Chai
+U199,12,Vegan Sandwich,Sandwich,35,2025-07-07 16:25:00,Snacks,Monday,3,200,Mild,62,6,10,Teen,M,65,Lassi+RajmaChawal
+U181,11,Milkshake,Beverages,50,2024-07-28 14:31:00,Lunch,Sunday,4,220,Mild,87,9,3,Teen,M,67,Lassi+RajmaChawal
+U130,11,Milkshake,Beverages,50,2025-08-01 08:26:00,Breakfast,Friday,3,220,Mild,96,2,13,20s,M,74,Chai+Samosa
+U145,10,Coffee,Beverages,30,2025-06-04 17:14:00,Snacks,Wednesday,3,100,Mild,69,4,5,20s,M,48,Maggi+Chai
+U179,23,Chole Chawal,Special,55,2024-06-25 13:08:00,Lunch,Tuesday,3,470,Spicy,60,5,8,20s,F,69,Maggi+Chai
+U116,20,Corn Pizza,Pizza,75,2025-06-23 15:44:00,Snacks,Monday,4,420,Mild,93,20,1,Teen,M,27,Chai+Samosa
+U134,13,Grilled Sandwich,Sandwich,40,2024-11-04 13:15:00,Lunch,Monday,4,230,Medium,92,3,0,30s,M,32,Pizza+ColdDrink
+U122,15,Veg Noodles,Noodles,40,2024-07-20 14:09:00,Lunch,Saturday,4,280,Medium,62,6,13,30s,F,72,Pizza+ColdDrink
+U163,19,Tomato Pizza,Pizza,70,2024-11-22 12:08:00,Lunch,Friday,4,380,Medium,73,10,3,30s,F,71,Maggi+Chai
+U161,15,Veg Noodles,Noodles,40,2025-01-14 16:05:00,Snacks,Tuesday,5,280,Medium,83,1,9,Teen,M,57,Maggi+Chai
+U186,21,Chole Bature,Special,50,2024-10-07 12:10:00,Lunch,Monday,5,500,Medium,87,18,12,20s,F,20,Lassi+RajmaChawal
+U174,10,Coffee,Beverages,30,2025-01-30 09:42:00,Breakfast,Thursday,5,100,Mild,88,6,8,30s,M,53,Burger+Fries
+U177,8,Cold drinks,Beverages,20,2024-02-27 09:48:00,Breakfast,Tuesday,4,160,Mild,88,9,14,Teen,M,36,Burger+Fries
+U176,12,Vegan Sandwich,Sandwich,35,2024-08-21 16:31:00,Snacks,Wednesday,4,200,Mild,57,20,13,Teen,M,35,Sandwich+Coffee
+U144,2,Samosa,Snacks,15,2024-02-28 16:06:00,Snacks,Wednesday,3,180,Spicy,89,2,14,Teen,F,77,Sandwich+Coffee
+U188,13,Grilled Sandwich,Sandwich,40,2024-01-03 08:53:00,Breakfast,Wednesday,4,230,Medium,96,17,8,30s,M,70,Lassi+RajmaChawal
+U102,17,Fried Rice,Noodles,50,2024-03-11 12:04:00,Lunch,Monday,5,350,Medium,61,15,0,20s,F,35,Chai+Samosa
+U128,10,Coffee,Beverages,30,2024-06-07 14:14:00,Lunch,Friday,3,100,Mild,65,19,0,Teen,F,49,Chai+Samosa
+U169,4,Hot Dog,Snacks,45,2024-05-07 17:44:00,Snacks,Tuesday,4,270,Spicy,74,12,0,20s,M,36,Chai+Samosa
+U136,21,Chole Bature,Special,50,2024-01-17 08:24:00,Breakfast,Wednesday,5,500,Medium,77,3,4,30s,F,41,Sandwich+Coffee
+U133,23,Chole Chawal,Special,55,2024-02-13 14:03:00,Lunch,Tuesday,3,470,Spicy,92,8,4,20s,F,62,Lassi+RajmaChawal
+U186,20,Corn Pizza,Pizza,75,2025-05-29 14:51:00,Lunch,Thursday,4,420,Mild,62,19,0,30s,M,21,Pizza+ColdDrink
+U141,10,Coffee,Beverages,30,2025-08-29 08:41:00,Breakfast,Friday,3,100,Mild,70,6,12,Teen,M,75,Chai+Samosa
+U114,11,Milkshake,Beverages,50,2024-07-11 09:31:00,Breakfast,Thursday,4,220,Mild,92,16,7,20s,M,38,Sandwich+Coffee
+U184,17,Fried Rice,Noodles,50,2025-01-31 17:15:00,Snacks,Friday,5,350,Medium,66,18,14,20s,M,55,Burger+Fries
+U112,8,Cold drinks,Beverages,20,2025-06-11 16:11:00,Snacks,Wednesday,5,160,Mild,54,6,8,30s,M,34,Pizza+ColdDrink
+U115,3,Burger,Salad,35,2025-09-10 17:44:00,Snacks,Wednesday,5,250,Medium,56,20,5,20s,F,25,Burger+Fries
+U180,6,Peri Peri Fries,Snacks,50,2025-08-03 17:29:00,Snacks,Sunday,5,320,Spicy,58,19,6,20s,F,68,Pizza+ColdDrink
+U147,1,Chips,Snacks,20,2024-08-01 14:52:00,Lunch,Thursday,3,150,Mild,93,5,13,Teen,F,68,Sandwich+Coffee
+U179,17,Fried Rice,Noodles,50,2025-03-04 15:57:00,Snacks,Tuesday,3,350,Medium,66,15,6,20s,M,47,Lassi+RajmaChawal
+U187,2,Samosa,Snacks,15,2024-08-24 10:33:00,Breakfast,Saturday,3,180,Spicy,85,19,14,30s,F,29,Burger+Fries
+U168,11,Milkshake,Beverages,50,2025-04-10 14:46:00,Lunch,Thursday,4,220,Mild,60,9,13,20s,M,71,Maggi+Chai
+U140,7,Chai,Beverages,15,2024-02-25 09:53:00,Breakfast,Sunday,4,80,Mild,83,5,6,30s,F,74,Chai+Samosa
+U157,15,Veg Noodles,Noodles,40,2025-01-09 09:03:00,Breakfast,Thursday,5,280,Medium,70,16,7,30s,F,74,Maggi+Chai
+U161,13,Grilled Sandwich,Sandwich,40,2025-10-31 17:18:00,Snacks,Friday,3,230,Medium,62,9,14,Teen,M,23,Sandwich+Coffee
+U158,18,Cheese Pizza,Pizza,65,2024-07-04 16:06:00,Snacks,Thursday,5,400,Mild,64,4,14,20s,F,55,Pizza+ColdDrink
+U193,9,Lassi,Beverages,25,2025-01-10 16:27:00,Snacks,Friday,5,200,Mild,67,19,0,20s,M,74,Burger+Fries
+U156,22,Rajma Chawal,Special,50,2025-10-07 16:57:00,Snacks,Tuesday,5,450,Medium,77,9,4,20s,F,58,Lassi+RajmaChawal
+U190,12,Vegan Sandwich,Sandwich,35,2025-09-09 11:00:00,Lunch,Tuesday,5,200,Mild,59,10,7,20s,F,44,Lassi+RajmaChawal
+U196,13,Grilled Sandwich,Sandwich,40,2024-11-16 15:59:00,Snacks,Saturday,4,230,Medium,93,20,6,20s,F,43,Chai+Samosa
+U134,1,Chips,Snacks,20,2024-12-12 15:21:00,Snacks,Thursday,5,150,Mild,69,5,4,Teen,M,73,Pizza+ColdDrink
+U144,7,Chai,Beverages,15,2025-09-23 10:52:00,Breakfast,Tuesday,5,80,Mild,88,9,11,30s,M,62,Sandwich+Coffee
+U167,14,Bread Sandwich,Sandwich,24,2024-01-10 14:49:00,Lunch,Wednesday,5,190,Mild,72,7,7,Teen,M,53,Sandwich+Coffee
+U113,5,Maggi,Snacks,35,2024-04-09 14:32:00,Lunch,Tuesday,3,300,Medium,82,8,5,Teen,F,37,Burger+Fries
+U136,11,Milkshake,Beverages,50,2025-08-30 16:50:00,Snacks,Saturday,5,220,Mild,86,14,6,30s,M,34,Maggi+Chai
+U177,18,Cheese Pizza,Pizza,65,2024-12-14 17:14:00,Snacks,Saturday,3,400,Mild,77,4,8,20s,F,34,Sandwich+Coffee
+U170,14,Bread Sandwich,Sandwich,24,2024-08-19 09:57:00,Breakfast,Monday,4,190,Mild,90,13,5,Teen,M,62,Lassi+RajmaChawal
+U170,8,Cold drinks,Beverages,20,2024-01-03 10:12:00,Breakfast,Wednesday,4,160,Mild,97,18,1,30s,F,28,Pizza+ColdDrink
+U131,17,Fried Rice,Noodles,50,2025-10-17 13:09:00,Lunch,Friday,5,350,Medium,71,1,7,30s,M,69,Maggi+Chai
+U156,23,Chole Chawal,Special,55,2024-06-10 12:27:00,Lunch,Monday,4,470,Spicy,52,9,11,30s,F,67,Chai+Samosa
+U156,3,Burger,Salad,35,2024-06-30 13:22:00,Lunch,Sunday,5,250,Medium,66,17,7,Teen,M,63,Burger+Fries
+U135,16,Hakka Noodles,Noodles,45,2025-08-20 13:02:00,Lunch,Wednesday,5,300,Spicy,69,7,6,Teen,F,27,Sandwich+Coffee
+U139,20,Corn Pizza,Pizza,75,2025-04-27 14:32:00,Lunch,Sunday,4,420,Mild,54,8,9,Teen,F,34,Maggi+Chai
+U157,1,Chips,Snacks,20,2024-01-04 13:04:00,Lunch,Thursday,3,150,Mild,75,6,15,Teen,M,57,Pizza+ColdDrink
+U138,1,Chips,Snacks,20,2024-02-25 10:28:00,Breakfast,Sunday,5,150,Mild,75,6,12,30s,F,76,Burger+Fries
+U179,22,Rajma Chawal,Special,50,2025-01-01 11:49:00,Lunch,Wednesday,3,450,Medium,60,7,9,Teen,M,27,Pizza+ColdDrink
+U139,1,Chips,Snacks,20,2025-08-17 16:49:00,Snacks,Sunday,4,150,Mild,58,19,1,Teen,M,49,Maggi+Chai
+U173,11,Milkshake,Beverages,50,2024-10-30 15:54:00,Snacks,Wednesday,5,220,Mild,72,8,3,20s,M,61,Sandwich+Coffee
+U108,14,Bread Sandwich,Sandwich,24,2025-09-09 14:57:00,Lunch,Tuesday,3,190,Mild,51,19,8,20s,F,47,Burger+Fries
+U162,1,Chips,Snacks,20,2024-10-09 12:01:00,Lunch,Wednesday,5,150,Mild,55,19,0,20s,F,30,Pizza+ColdDrink
+U183,19,Tomato Pizza,Pizza,70,2025-01-01 10:58:00,Breakfast,Wednesday,3,380,Medium,96,8,5,20s,F,44,Chai+Samosa
+U170,1,Chips,Snacks,20,2024-11-07 11:00:00,Lunch,Thursday,5,150,Mild,55,4,1,20s,M,51,Lassi+RajmaChawal
+U124,7,Chai,Beverages,15,2025-07-14 08:12:00,Breakfast,Monday,4,80,Mild,78,5,0,30s,M,27,Sandwich+Coffee
+U113,9,Lassi,Beverages,25,2024-09-04 10:59:00,Breakfast,Wednesday,4,200,Mild,64,11,15,Teen,M,53,Pizza+ColdDrink
+U135,21,Chole Bature,Special,50,2025-07-20 13:13:00,Lunch,Sunday,5,500,Medium,90,6,13,Teen,F,79,Sandwich+Coffee
+U131,3,Burger,Salad,35,2024-03-20 17:25:00,Snacks,Wednesday,3,250,Medium,67,9,9,Teen,M,49,Sandwich+Coffee
+U171,23,Chole Chawal,Special,55,2025-08-03 13:47:00,Lunch,Sunday,5,470,Spicy,61,12,9,20s,F,60,Burger+Fries
+U125,14,Bread Sandwich,Sandwich,24,2025-03-22 08:36:00,Breakfast,Saturday,4,190,Mild,57,7,3,30s,M,62,Chai+Samosa
+U128,17,Fried Rice,Noodles,50,2024-08-29 13:44:00,Lunch,Thursday,4,350,Medium,50,11,3,Teen,F,31,Sandwich+Coffee
+U152,11,Milkshake,Beverages,50,2025-10-16 13:56:00,Lunch,Thursday,4,220,Mild,81,13,2,20s,F,33,Lassi+RajmaChawal
+U169,1,Chips,Snacks,20,2024-03-23 15:47:00,Snacks,Saturday,3,150,Mild,78,19,4,30s,F,42,Chai+Samosa
+U116,19,Tomato Pizza,Pizza,70,2025-05-06 16:29:00,Snacks,Tuesday,4,380,Medium,94,9,1,20s,F,64,Chai+Samosa
+U107,6,Peri Peri Fries,Snacks,50,2025-10-20 17:12:00,Snacks,Monday,5,320,Spicy,76,2,15,30s,M,31,Maggi+Chai
+U182,9,Lassi,Beverages,25,2025-02-03 08:59:00,Breakfast,Monday,4,200,Mild,51,15,5,30s,M,65,Pizza+ColdDrink
+U133,7,Chai,Beverages,15,2024-12-26 16:06:00,Snacks,Thursday,5,80,Mild,88,20,14,Teen,M,45,Pizza+ColdDrink
+U134,12,Vegan Sandwich,Sandwich,35,2024-04-16 13:49:00,Lunch,Tuesday,3,200,Mild,83,16,9,Teen,M,44,Pizza+ColdDrink
+U192,24,Puri-Sabji,Special,40,2025-04-22 14:53:00,Lunch,Tuesday,3,400,Medium,54,6,3,30s,F,56,Pizza+ColdDrink
+U114,22,Rajma Chawal,Special,50,2025-03-11 09:14:00,Breakfast,Tuesday,5,450,Medium,93,20,1,30s,F,31,Maggi+Chai
+U126,14,Bread Sandwich,Sandwich,24,2024-09-23 17:48:00,Snacks,Monday,4,190,Mild,91,1,3,30s,F,45,Chai+Samosa
+U184,13,Grilled Sandwich,Sandwich,40,2024-11-29 09:52:00,Breakfast,Friday,3,230,Medium,61,20,11,20s,M,31,Maggi+Chai
+U192,5,Maggi,Snacks,35,2024-10-17 10:59:00,Breakfast,Thursday,4,300,Medium,59,11,2,30s,M,32,Maggi+Chai
+U192,7,Chai,Beverages,15,2024-08-10 13:26:00,Lunch,Saturday,4,80,Mild,57,17,9,20s,M,72,Sandwich+Coffee
+U185,23,Chole Chawal,Special,55,2025-06-21 08:38:00,Breakfast,Saturday,3,470,Spicy,84,16,5,30s,M,61,Sandwich+Coffee
+U107,14,Bread Sandwich,Sandwich,24,2025-03-20 12:04:00,Lunch,Thursday,5,190,Mild,89,7,12,Teen,F,39,Pizza+ColdDrink
+U195,2,Samosa,Snacks,15,2024-03-12 08:25:00,Breakfast,Tuesday,4,180,Spicy,68,8,0,Teen,M,49,Maggi+Chai
+U182,21,Chole Bature,Special,50,2024-12-11 12:26:00,Lunch,Wednesday,5,500,Medium,58,9,0,Teen,M,72,Sandwich+Coffee
+U127,3,Burger,Salad,35,2024-03-09 14:09:00,Lunch,Saturday,3,250,Medium,89,15,15,Teen,F,34,Chai+Samosa
+U114,7,Chai,Beverages,15,2024-05-07 11:25:00,Lunch,Tuesday,3,80,Mild,66,6,14,30s,M,69,Sandwich+Coffee
+U179,13,Grilled Sandwich,Sandwich,40,2025-01-12 14:34:00,Lunch,Sunday,5,230,Medium,67,11,0,20s,F,69,Sandwich+Coffee
+U122,5,Maggi,Snacks,35,2025-08-13 14:55:00,Lunch,Wednesday,3,300,Medium,93,4,6,30s,M,45,Lassi+RajmaChawal
+U183,5,Maggi,Snacks,35,2024-01-02 08:16:00,Breakfast,Tuesday,3,300,Medium,81,4,6,Teen,F,25,Chai+Samosa
+U103,5,Maggi,Snacks,35,2025-09-30 16:40:00,Snacks,Tuesday,5,300,Medium,95,6,9,30s,F,24,Pizza+ColdDrink
+U110,10,Coffee,Beverages,30,2025-05-04 17:39:00,Snacks,Sunday,4,100,Mild,75,3,0,Teen,M,38,Maggi+Chai
+U130,17,Fried Rice,Noodles,50,2024-12-15 17:12:00,Snacks,Sunday,4,350,Medium,71,16,15,30s,F,77,Maggi+Chai
+U110,21,Chole Bature,Special,50,2024-01-06 14:34:00,Lunch,Saturday,4,500,Medium,80,7,11,30s,M,60,Sandwich+Coffee
+U109,4,Hot Dog,Snacks,45,2024-04-21 17:03:00,Snacks,Sunday,3,270,Spicy,50,7,2,20s,F,50,Burger+Fries
+U136,21,Chole Bature,Special,50,2024-10-03 13:10:00,Lunch,Thursday,4,500,Medium,70,3,1,Teen,M,22,Lassi+RajmaChawal
+U130,1,Chips,Snacks,20,2025-03-21 13:20:00,Lunch,Friday,5,150,Mild,58,1,1,30s,F,68,Lassi+RajmaChawal
+U176,23,Chole Chawal,Special,55,2024-11-28 17:03:00,Snacks,Thursday,3,470,Spicy,62,12,12,Teen,M,65,Pizza+ColdDrink
+U163,10,Coffee,Beverages,30,2025-07-25 14:29:00,Lunch,Friday,5,100,Mild,89,5,11,20s,M,63,Burger+Fries
+U146,3,Burger,Salad,35,2024-10-06 17:43:00,Snacks,Sunday,4,250,Medium,97,2,11,Teen,M,50,Maggi+Chai
+U100,12,Vegan Sandwich,Sandwich,35,2024-05-21 10:02:00,Breakfast,Tuesday,4,200,Mild,64,14,6,20s,F,35,Lassi+RajmaChawal
+U147,6,Peri Peri Fries,Snacks,50,2025-10-25 13:46:00,Lunch,Saturday,5,320,Spicy,69,20,5,30s,M,51,Maggi+Chai
+U151,2,Samosa,Snacks,15,2025-09-22 09:08:00,Breakfast,Monday,3,180,Spicy,72,20,9,30s,M,44,Burger+Fries
+U107,15,Veg Noodles,Noodles,40,2024-05-17 12:16:00,Lunch,Friday,5,280,Medium,55,2,15,20s,M,29,Chai+Samosa
+U146,11,Milkshake,Beverages,50,2024-05-20 09:42:00,Breakfast,Monday,3,220,Mild,67,18,13,20s,M,20,Maggi+Chai
+U168,11,Milkshake,Beverages,50,2024-06-08 14:46:00,Lunch,Saturday,3,220,Mild,59,13,10,30s,M,71,Lassi+RajmaChawal
+U143,9,Lassi,Beverages,25,2024-12-07 14:44:00,Lunch,Saturday,4,200,Mild,94,18,13,Teen,F,66,Sandwich+Coffee
+U112,24,Puri-Sabji,Special,40,2025-05-09 14:05:00,Lunch,Friday,4,400,Medium,98,3,13,30s,F,25,Pizza+ColdDrink
+U199,2,Samosa,Snacks,15,2024-01-02 17:25:00,Snacks,Tuesday,4,180,Spicy,100,4,2,Teen,M,55,Lassi+RajmaChawal
+U170,5,Maggi,Snacks,35,2024-12-30 12:01:00,Lunch,Monday,3,300,Medium,76,14,2,30s,F,32,Maggi+Chai
+U140,1,Chips,Snacks,20,2024-11-10 15:24:00,Snacks,Sunday,5,150,Mild,76,13,5,Teen,M,79,Maggi+Chai
+U135,3,Burger,Salad,35,2025-08-15 11:31:00,Lunch,Friday,4,250,Medium,62,14,7,20s,M,44,Burger+Fries
+U179,12,Vegan Sandwich,Sandwich,35,2025-01-12 13:14:00,Lunch,Sunday,5,200,Mild,92,15,6,20s,M,60,Chai+Samosa
+U195,19,Tomato Pizza,Pizza,70,2024-01-29 15:24:00,Snacks,Monday,4,380,Medium,94,2,11,Teen,F,71,Lassi+RajmaChawal
+U141,5,Maggi,Snacks,35,2024-09-19 16:25:00,Snacks,Thursday,5,300,Medium,84,19,11,20s,M,70,Burger+Fries
+U113,12,Vegan Sandwich,Sandwich,35,2025-05-02 10:27:00,Breakfast,Friday,3,200,Mild,70,20,9,20s,M,47,Lassi+RajmaChawal
+U149,12,Vegan Sandwich,Sandwich,35,2024-03-06 09:28:00,Breakfast,Wednesday,4,200,Mild,75,11,0,Teen,F,34,Lassi+RajmaChawal
+U143,5,Maggi,Snacks,35,2024-06-18 12:13:00,Lunch,Tuesday,4,300,Medium,66,12,3,20s,M,55,Maggi+Chai
+U175,2,Samosa,Snacks,15,2025-01-17 15:12:00,Snacks,Friday,4,180,Spicy,98,6,3,30s,F,80,Pizza+ColdDrink
+U158,15,Veg Noodles,Noodles,40,2025-02-16 15:58:00,Snacks,Sunday,5,280,Medium,91,18,5,Teen,M,39,Maggi+Chai
+U154,4,Hot Dog,Snacks,45,2024-04-13 14:39:00,Lunch,Saturday,3,270,Spicy,63,10,2,Teen,F,22,Chai+Samosa
+U186,18,Cheese Pizza,Pizza,65,2025-10-15 12:07:00,Lunch,Wednesday,4,400,Mild,58,3,4,30s,F,61,Pizza+ColdDrink
+U128,5,Maggi,Snacks,35,2025-07-24 14:41:00,Lunch,Thursday,3,300,Medium,81,2,7,20s,M,26,Sandwich+Coffee
+U132,14,Bread Sandwich,Sandwich,24,2024-11-25 10:57:00,Breakfast,Monday,5,190,Mild,68,17,10,Teen,M,22,Maggi+Chai
+U157,13,Grilled Sandwich,Sandwich,40,2025-07-01 09:26:00,Breakfast,Tuesday,5,230,Medium,91,12,5,20s,F,21,Lassi+RajmaChawal
+U178,18,Cheese Pizza,Pizza,65,2025-08-27 08:19:00,Breakfast,Wednesday,3,400,Mild,76,7,7,30s,F,46,Maggi+Chai
+U137,9,Lassi,Beverages,25,2025-01-20 17:44:00,Snacks,Monday,3,200,Mild,78,2,9,Teen,M,76,Chai+Samosa
+U179,14,Bread Sandwich,Sandwich,24,2025-03-07 14:31:00,Lunch,Friday,4,190,Mild,75,6,15,Teen,M,27,Lassi+RajmaChawal
+U110,10,Coffee,Beverages,30,2024-05-02 12:01:00,Lunch,Thursday,3,100,Mild,68,1,2,Teen,F,78,Burger+Fries
+U123,24,Puri-Sabji,Special,40,2024-12-28 11:06:00,Lunch,Saturday,5,400,Medium,76,4,15,Teen,F,59,Maggi+Chai
+U199,7,Chai,Beverages,15,2024-08-31 13:51:00,Lunch,Saturday,4,80,Mild,84,11,8,Teen,F,28,Lassi+RajmaChawal
+U142,13,Grilled Sandwich,Sandwich,40,2025-05-25 13:56:00,Lunch,Sunday,3,230,Medium,53,10,3,20s,F,28,Lassi+RajmaChawal
+U195,22,Rajma Chawal,Special,50,2024-05-09 12:47:00,Lunch,Thursday,4,450,Medium,97,6,4,Teen,M,49,Pizza+ColdDrink
+U133,11,Milkshake,Beverages,50,2025-07-03 13:36:00,Lunch,Thursday,3,220,Mild,67,6,3,30s,F,50,Lassi+RajmaChawal
+U167,15,Veg Noodles,Noodles,40,2024-07-07 16:47:00,Snacks,Sunday,3,280,Medium,70,17,2,20s,F,59,Burger+Fries
+U177,4,Hot Dog,Snacks,45,2024-06-30 15:08:00,Snacks,Sunday,4,270,Spicy,94,3,14,Teen,M,72,Pizza+ColdDrink
+U187,24,Puri-Sabji,Special,40,2024-04-09 08:16:00,Breakfast,Tuesday,5,400,Medium,74,7,14,Teen,M,38,Pizza+ColdDrink
+U175,7,Chai,Beverages,15,2025-03-23 12:50:00,Lunch,Sunday,4,80,Mild,65,16,13,20s,F,32,Sandwich+Coffee
+U100,2,Samosa,Snacks,15,2024-10-12 08:45:00,Breakfast,Saturday,3,180,Spicy,54,19,7,Teen,F,20,Lassi+RajmaChawal
+U110,19,Tomato Pizza,Pizza,70,2024-09-11 13:22:00,Lunch,Wednesday,3,380,Medium,56,9,10,30s,F,69,Sandwich+Coffee
+U177,21,Chole Bature,Special,50,2024-05-22 12:33:00,Lunch,Wednesday,4,500,Medium,85,9,13,20s,F,21,Pizza+ColdDrink
+U158,16,Hakka Noodles,Noodles,45,2025-10-04 13:44:00,Lunch,Saturday,3,300,Spicy,99,20,1,Teen,F,78,Chai+Samosa
+U199,2,Samosa,Snacks,15,2024-11-29 09:10:00,Breakfast,Friday,3,180,Spicy,60,5,7,30s,F,62,Pizza+ColdDrink
+U189,16,Hakka Noodles,Noodles,45,2024-01-28 12:19:00,Lunch,Sunday,5,300,Spicy,71,20,12,30s,F,20,Chai+Samosa
+U191,24,Puri-Sabji,Special,40,2025-06-10 16:23:00,Snacks,Tuesday,3,400,Medium,80,9,4,Teen,F,50,Burger+Fries
+U102,19,Tomato Pizza,Pizza,70,2025-08-25 08:02:00,Breakfast,Monday,3,380,Medium,90,3,7,20s,M,65,Burger+Fries
+U154,24,Puri-Sabji,Special,40,2024-07-17 16:53:00,Snacks,Wednesday,5,400,Medium,94,20,4,Teen,F,68,Chai+Samosa
+U138,9,Lassi,Beverages,25,2024-08-22 11:22:00,Lunch,Thursday,3,200,Mild,84,13,9,30s,M,65,Burger+Fries
+U130,18,Cheese Pizza,Pizza,65,2025-10-06 16:09:00,Snacks,Monday,3,400,Mild,65,12,14,Teen,F,48,Lassi+RajmaChawal
+U193,13,Grilled Sandwich,Sandwich,40,2025-03-29 12:31:00,Lunch,Saturday,3,230,Medium,69,6,14,20s,F,58,Chai+Samosa
+U143,15,Veg Noodles,Noodles,40,2024-09-25 11:07:00,Lunch,Wednesday,5,280,Medium,73,5,6,30s,F,23,Chai+Samosa
+U108,17,Fried Rice,Noodles,50,2025-06-07 16:28:00,Snacks,Saturday,5,350,Medium,86,19,6,Teen,M,62,Burger+Fries
+U110,6,Peri Peri Fries,Snacks,50,2024-08-27 10:20:00,Breakfast,Tuesday,5,320,Spicy,56,8,13,30s,F,47,Sandwich+Coffee
+U139,23,Chole Chawal,Special,55,2024-06-20 12:43:00,Lunch,Thursday,3,470,Spicy,78,9,12,20s,F,28,Lassi+RajmaChawal
+U173,18,Cheese Pizza,Pizza,65,2024-04-12 16:53:00,Snacks,Friday,5,400,Mild,58,8,14,20s,F,63,Sandwich+Coffee
+U122,6,Peri Peri Fries,Snacks,50,2024-05-26 09:09:00,Breakfast,Sunday,5,320,Spicy,75,6,15,20s,M,47,Lassi+RajmaChawal
+U122,12,Vegan Sandwich,Sandwich,35,2025-09-06 16:52:00,Snacks,Saturday,3,200,Mild,92,6,10,Teen,M,20,Sandwich+Coffee
+U100,1,Chips,Snacks,20,2024-10-11 15:54:00,Snacks,Friday,3,150,Mild,77,17,5,20s,M,75,Pizza+ColdDrink
+U110,2,Samosa,Snacks,15,2024-05-01 11:52:00,Lunch,Wednesday,5,180,Spicy,75,3,4,Teen,M,32,Maggi+Chai
+U131,10,Coffee,Beverages,30,2025-09-27 10:22:00,Breakfast,Saturday,5,100,Mild,55,20,1,Teen,M,59,Sandwich+Coffee
+U119,21,Chole Bature,Special,50,2024-02-10 15:56:00,Snacks,Saturday,4,500,Medium,60,9,8,Teen,F,29,Maggi+Chai
+U152,14,Bread Sandwich,Sandwich,24,2024-09-04 15:35:00,Snacks,Wednesday,4,190,Mild,83,2,3,20s,F,30,Sandwich+Coffee
+U115,12,Vegan Sandwich,Sandwich,35,2025-04-03 15:16:00,Snacks,Thursday,3,200,Mild,51,12,15,20s,F,75,Maggi+Chai
+U161,8,Cold drinks,Beverages,20,2024-01-01 17:35:00,Snacks,Monday,5,160,Mild,66,1,8,30s,M,30,Maggi+Chai
+U194,10,Coffee,Beverages,30,2025-08-01 14:13:00,Lunch,Friday,3,100,Mild,68,9,8,20s,F,25,Pizza+ColdDrink
+U181,20,Corn Pizza,Pizza,75,2025-05-11 14:25:00,Lunch,Sunday,5,420,Mild,87,17,15,Teen,F,72,Sandwich+Coffee
+U198,2,Samosa,Snacks,15,2024-03-25 09:42:00,Breakfast,Monday,3,180,Spicy,52,9,7,30s,M,29,Pizza+ColdDrink
+U164,4,Hot Dog,Snacks,45,2024-04-01 14:06:00,Lunch,Monday,3,270,Spicy,74,9,12,Teen,F,66,Sandwich+Coffee
+U126,13,Grilled Sandwich,Sandwich,40,2024-05-27 11:51:00,Lunch,Monday,5,230,Medium,50,5,9,Teen,F,26,Maggi+Chai
+U100,11,Milkshake,Beverages,50,2024-03-20 15:16:00,Snacks,Wednesday,4,220,Mild,66,17,8,Teen,M,60,Pizza+ColdDrink
+U137,7,Chai,Beverages,15,2025-03-17 13:12:00,Lunch,Monday,3,80,Mild,73,1,9,Teen,F,78,Lassi+RajmaChawal
+U166,5,Maggi,Snacks,35,2024-09-12 12:18:00,Lunch,Thursday,5,300,Medium,91,2,7,20s,M,51,Burger+Fries
+U151,6,Peri Peri Fries,Snacks,50,2024-06-13 15:29:00,Snacks,Thursday,3,320,Spicy,82,14,9,20s,M,53,Lassi+RajmaChawal
+U199,19,Tomato Pizza,Pizza,70,2024-03-29 12:09:00,Lunch,Friday,5,380,Medium,72,5,5,30s,F,63,Maggi+Chai
+U133,20,Corn Pizza,Pizza,75,2025-03-18 13:59:00,Lunch,Tuesday,4,420,Mild,71,13,7,20s,M,40,Lassi+RajmaChawal
+U144,17,Fried Rice,Noodles,50,2024-11-19 15:04:00,Snacks,Tuesday,4,350,Medium,71,13,9,30s,F,24,Pizza+ColdDrink
+U148,21,Chole Bature,Special,50,2024-05-20 12:18:00,Lunch,Monday,4,500,Medium,100,7,9,30s,M,36,Lassi+RajmaChawal
+U162,3,Burger,Salad,35,2024-09-25 17:24:00,Snacks,Wednesday,4,250,Medium,78,1,12,20s,F,55,Maggi+Chai
+U118,6,Peri Peri Fries,Snacks,50,2024-07-15 13:21:00,Lunch,Monday,3,320,Spicy,73,20,15,Teen,F,33,Pizza+ColdDrink
+U147,19,Tomato Pizza,Pizza,70,2024-12-14 15:31:00,Snacks,Saturday,3,380,Medium,98,1,8,Teen,F,67,Maggi+Chai
+U154,21,Chole Bature,Special,50,2024-10-07 12:43:00,Lunch,Monday,5,500,Medium,50,1,5,20s,M,39,Maggi+Chai
+U153,2,Samosa,Snacks,15,2025-10-08 11:47:00,Lunch,Wednesday,3,180,Spicy,94,16,14,20s,F,22,Pizza+ColdDrink
+U107,12,Vegan Sandwich,Sandwich,35,2024-08-05 14:52:00,Lunch,Monday,3,200,Mild,95,13,1,Teen,F,72,Lassi+RajmaChawal
+U121,11,Milkshake,Beverages,50,2025-07-11 13:59:00,Lunch,Friday,3,220,Mild,81,2,12,20s,F,33,Burger+Fries
+U128,23,Chole Chawal,Special,55,2024-04-11 11:01:00,Lunch,Thursday,3,470,Spicy,51,20,9,20s,F,57,Sandwich+Coffee
+U197,21,Chole Bature,Special,50,2024-12-24 16:33:00,Snacks,Tuesday,3,500,Medium,93,7,9,20s,F,69,Maggi+Chai
+U185,9,Lassi,Beverages,25,2024-03-17 16:16:00,Snacks,Sunday,4,200,Mild,60,5,9,30s,F,57,Maggi+Chai
+U187,23,Chole Chawal,Special,55,2024-10-31 16:14:00,Snacks,Thursday,4,470,Spicy,87,20,3,20s,M,76,Lassi+RajmaChawal
+U193,13,Grilled Sandwich,Sandwich,40,2024-12-11 10:09:00,Breakfast,Wednesday,5,230,Medium,75,1,7,30s,M,45,Lassi+RajmaChawal
+U100,11,Milkshake,Beverages,50,2024-11-15 11:38:00,Lunch,Friday,5,220,Mild,75,10,11,20s,M,41,Lassi+RajmaChawal
+U130,21,Chole Bature,Special,50,2025-05-21 17:58:00,Snacks,Wednesday,3,500,Medium,93,15,5,20s,F,22,Maggi+Chai
+U144,20,Corn Pizza,Pizza,75,2025-08-02 14:08:00,Lunch,Saturday,3,420,Mild,85,11,9,30s,F,44,Maggi+Chai
+U166,1,Chips,Snacks,20,2024-04-02 16:27:00,Snacks,Tuesday,3,150,Mild,94,9,6,30s,M,61,Sandwich+Coffee
+U177,15,Veg Noodles,Noodles,40,2024-05-09 13:43:00,Lunch,Thursday,4,280,Medium,59,5,12,30s,F,67,Chai+Samosa
+U155,21,Chole Bature,Special,50,2025-01-11 15:34:00,Snacks,Saturday,4,500,Medium,58,11,2,Teen,M,30,Pizza+ColdDrink
+U163,6,Peri Peri Fries,Snacks,50,2024-02-14 10:03:00,Breakfast,Wednesday,5,320,Spicy,78,4,1,Teen,F,54,Maggi+Chai
+U174,24,Puri-Sabji,Special,40,2025-10-03 10:23:00,Breakfast,Friday,5,400,Medium,54,7,0,20s,M,22,Chai+Samosa
+U151,7,Chai,Beverages,15,2025-08-25 09:28:00,Breakfast,Monday,3,80,Mild,94,20,15,30s,M,59,Sandwich+Coffee
+U127,11,Milkshake,Beverages,50,2025-01-21 09:41:00,Breakfast,Tuesday,5,220,Mild,84,11,7,20s,F,71,Pizza+ColdDrink
+U136,8,Cold drinks,Beverages,20,2024-04-16 10:32:00,Breakfast,Tuesday,3,160,Mild,64,3,5,Teen,F,51,Chai+Samosa
