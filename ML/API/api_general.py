@@ -8,9 +8,10 @@ import pandas as pd
 import traceback
 
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../ML/Model")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../ML")))
 
-from Model.general_recommendation import ContentBasedRecommender
+from ML.Model.general_recommendation import ContentBasedRecommender
+
 
 
 
@@ -30,7 +31,9 @@ if not os.path.exists(DATA_PATH):
 
 
 df_raw = pd.read_csv(DATA_PATH)
-MODEL_PATH = os.path.abspath("../ML/Model/item_similarity.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "..", "Model", "item_similarity.pkl")
+MODEL_PATH = os.path.abspath(MODEL_PATH)
+print(" MODEL_PATH:", MODEL_PATH)
 
 
 recommender = ContentBasedRecommender(DATA_PATH)
