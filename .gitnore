@@ -1,0 +1,112 @@
+# Ignore Python cache & build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+# Ignore raw data except the main dataset
+ML/Data/raw/*
+!ML/Data/raw/canteen_recommendation_dataset.csv
+
+# Ignore processed data except final
+ML/Data/processed/*
+!ML/Data/processed/canteen_data_final.csv
+
+# Ignore model artifacts unless needed
+*.h5
+*.joblib
+*.sav
+*.pt
+
+# Ignore render build artifacts
+.render-build/
+# Ignore Python cache & build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+# Ignore raw data except the main dataset
+ML/Data/raw/*
+!ML/Data/raw/canteen_recommendation_dataset.csv
+
+# Ignore processed data except final
+ML/Data/processed/*
+# Ignore Python cache & build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+# Ignore raw data except the main dataset
+ML/Data/raw/*
+!ML/Data/raw/canteen_recommendation_dataset.csv
+
+# Ignore processed data except final
+ML/Data/processed/*
+!ML/Data/processed/canteen_data_final.csv
+
+# Ignore model artifacts unless needed
+*.h5
+*.joblib
+*.sav
+*.pt
+
+# Ignore render build artifacts
+.render-build/
+
+
