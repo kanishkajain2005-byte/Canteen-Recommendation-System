@@ -1,22 +1,22 @@
 import os
 import random
-import pandas as pd
-from dotenv import load_dotenv
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 from typing import List
+from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-
 from ML.API.recommend_api import (
+    load_orders,
     get_menu,
     get_popular,
     get_highest_rated,
     find_by_category,
-    spicy_items
+    find_item_price
 )
 
 load_dotenv()
+
 router = APIRouter(prefix="/chat", tags=["chat"])
 
 class Part(BaseModel):
@@ -35,105 +35,128 @@ class ChatResponse(BaseModel):
     updated_history: List[Content]
 
 try:
-    ai = genai.Client()
+    gemini_client = genai.Client()
     MODEL = "gemini-2.5-flash"
 except:
-    ai = None
+    gemini_client = None
 
-def rule_based(msg: str):
-    t = msg.lower().strip()
+def system_prompt():
+    m = get_menu()
+    p = get_popular(10)
+    r = get_highest_rated(10)
+    return f"""
+You are a smart canteen chatbot. Use the menu, prices, popularity, ratings, and categories to answer accurately.
+If asked about a food item, check if it exists in the menu.
+Never invent items.
+Always keep answers short and friendly.
+"""
 
-    menu = get_menu()
+def rule_reply(msg: str):
+    t = msg.lower()
 
-    if any(g in t for g in ["hi", "hello", "hey"]):
-        return random.choice([
-            "Hey! What’s cooking today? 😄",
-            "Hello! Ready to grab something yummy? 😋",
-            "Hi! What can I help you choose today? 🍽️"
-        ])
+    if "menu" in t:
+        m = get_menu()
+        if not m:
+            return "Menu is unavailable."
+        return "\n".join([f"- {i['item_name']} ₹{i['price']} ({i['category']}) rating {round(i['rating'],1)}" for i in m])
 
-    if "price of" in t or "cost of" in t:
-        name = t.replace("price of", "").replace("cost of", "").strip()
-        for item in menu:
-            if item["item_name"].lower() == name.lower():
-                return f"{item['item_name']} costs ₹{item['price']}."
-        return "That item is not on the menu."
-
-    if "show menu" in t or "menu" in t:
-        return "\n".join([f"- {i['item_name']} (₹{i['price']})" for i in menu])
-
-    if "popular" in t:
-        p = get_popular()
-        return "\n".join([f"{i+1}. {x['item_name']}" for i, x in enumerate(p)])
+    if "popular" in t or "trending" in t:
+        p = get_popular(10)
+        if not p:
+            return "Popularity data unavailable."
+        return "\n".join([f"{i+1}. {r['item_name']} score {round(r['score'],1)}" for i, r in enumerate(p)])
 
     if "highest rated" in t or "best rated" in t:
-        r = get_highest_rated()
-        return "\n".join([f"{i+1}. {x['item_name']}" for i, x in enumerate(r)])
+        r = get_highest_rated(10)
+        return "\n".join([f"{i+1}. {row['item_name']} rating {round(row['rating'],1)}" for i, row in enumerate(r)])
+
+    if "price" in t:
+        price = find_item_price(msg)
+        if price:
+            return f"The price is ₹{price}."
+        return "I couldn't find that item."
+
+    if "category" in t or "suggest" in t:
+        for cat in ["Breakfast", "Lunch", "Snacks", "Beverage"]:
+            if cat.lower() in t:
+                items = find_by_category(cat)
+                if not items:
+                    return "No items found."
+                return "\n".join([f"{i+1}. {r['item_name']} score {round(r['score'],1)}" for i, r in enumerate(items)])
 
     if "spicy" in t:
-        s = spicy_items()
-        if not s:
-            return "No spicy dishes found."
-        return "\n".join([f"{i+1}. {x['item_name']}" for i, x in enumerate(s)])
-
-    if "category" in t:
-        cat = t.split("category")[-1].strip()
-        c = find_by_category(cat)
-        if not c:
-            return f"No items found for category '{cat}'."
-        return "\n".join([f"{i+1}. {x['item_name']}" for i, x in enumerate(c)])
+        m = get_menu()
+        spicy_items = [i for i in m if i["spicy_level"] >= 3]
+        if not spicy_items:
+            return "There are no spicy items."
+        return "\n".join([f"- {i['item_name']} 🌶️ (level {i['spicy_level']})" for i in spicy_items])
 
     return None
 
-def system_prompt():
-    menu = get_menu()
-    menu_text = "\n".join([f"- {i['item_name']} (₹{i['price']}) [{i['category']}]" for i in menu])
-
-    return f"""
-You are the official college canteen assistant.
-You must never invent menu items or prices.
-
-MENU:
-{menu_text}
-
-RULES:
-- Only answer using the menu and user dataset facts.
-- If asked about items not in the menu, say they are unavailable.
-- You can speak casually and friendly.
-"""
+def is_greeting(msg: str):
+    greet = ["hi", "hello", "hey", "yo", "hola", "sup", "hii", "hiii"]
+    clean = msg.lower().strip()
+    if clean in greet:
+        return True
+    for g in greet:
+        if clean.startswith(g + " "):
+            return True
+    return False
 
 @router.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     msg = request.new_message
 
-    r = rule_based(msg)
-    if r:
+    if is_greeting(msg):
+        reply = random.choice([
+            "Hey! What’s cooking today? 😄",
+            "Hello! Ready for something tasty? 😋",
+            "Hi! What can I get you today? 🍽️",
+            "Hey there! Hungry for something delicious? 😁"
+        ])
         updated = request.history + [
             Content(role="user", parts=[Part(text=msg)]),
-            Content(role="model", parts=[Part(text=r)])
+            Content(role="model", parts=[Part(text=reply)])
         ]
-        return ChatResponse(reply=r, updated_history=updated)
+        return ChatResponse(reply=reply, updated_history=updated)
 
-    if not ai:
-        raise HTTPException(503, "AI unavailable")
+    r = rule_reply(msg)
+    if r:
+        reply = r
+        updated = request.history + [
+            Content(role="user", parts=[Part(text=msg)]),
+            Content(role="model", parts=[Part(text=reply)])
+        ]
+        return ChatResponse(reply=reply, updated_history=updated)
+
+    if not gemini_client:
+        reply = "I'm having trouble connecting to AI. Try asking for menu, price, rating, or category."
+        updated = request.history + [
+            Content(role="user", parts=[Part(text=msg)]),
+            Content(role="model", parts=[Part(text=reply)])
+        ]
+        return ChatResponse(reply=reply, updated_history=updated)
 
     prompt = system_prompt()
-
     convo = [types.Content(role="user", parts=[types.Part(text=prompt)])]
 
-    for m in request.history:
-        convo.append(types.Content(role=m.role, parts=[types.Part(text=p.text) for p in m.parts]))
+    for h in request.history:
+        convo.append(types.Content(role=h.role, parts=[types.Part(text=p.text) for p in h.parts]))
 
     convo.append(types.Content(role="user", parts=[types.Part(text=msg)]))
 
     try:
-        res = ai.models.generate_content(model=MODEL, contents=convo)
+        res = gemini_client.models.generate_content(model=MODEL, contents=convo)
         reply = res.text
-    except Exception as e:
-        raise HTTPException(500, str(e))
+    except:
+        reply = "Something went wrong while thinking."
 
     updated = request.history + [
         Content(role="user", parts=[Part(text=msg)]),
         Content(role="model", parts=[Part(text=reply)])
     ]
     return ChatResponse(reply=reply, updated_history=updated)
+
+@router.get("/")
+def ping():
+    return {"ok": True}
