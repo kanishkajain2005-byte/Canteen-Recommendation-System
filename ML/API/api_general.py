@@ -10,7 +10,7 @@ import traceback
 # Add path to access ML/Model
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../ML/Model")))
 
-from Model.general_recommendation import ContentBasedRecommender
+from ML.Model.general_recommendation import ContentBasedRecommender
 
 
 # Initialize FastAPI app
