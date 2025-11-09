@@ -1,4 +1,4 @@
-
+#
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -6,42 +6,17 @@ from typing import List
 import sys, os
 import pandas as pd
 import traceback
-from fastapi.middleware.cors import CORSMiddleware
 
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../ML/Model")))
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../ML")))
-
-from ML.Model.general_recommendation import ContentBasedRecommender
-
-
+from Model.general_recommendation import ContentBasedRecommender
 
 
 app = FastAPI(title="Canteen General Recommendation API")
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Go one level up from /API
-DATA_PATH = os.path.join(BASE_DIR, "Data", "raw", "canteen_recommendation_dataset.csv")
-
-print("📁 BASE_DIR:", BASE_DIR)
-print("📁 DATA_PATH:", DATA_PATH)
-print("📁 Exists?", os.path.exists(DATA_PATH))
-
-if not os.path.exists(DATA_PATH):
-    raise FileNotFoundError(f"Dataset not found at {DATA_PATH}")
-
-
-
-df_raw = pd.read_csv(DATA_PATH)
-MODEL_PATH = os.path.join(BASE_DIR, "..", "Model", "item_similarity.pkl")
-MODEL_PATH = os.path.abspath(MODEL_PATH)
-print(" MODEL_PATH:", MODEL_PATH)
+DATA_PATH = os.path.abspath("../ML/Data/processed/canteen_data_final.csv")
+MODEL_PATH = os.path.abspath("../ML/Model/item_similarity.pkl")
 
 
 recommender = ContentBasedRecommender(DATA_PATH)
@@ -55,7 +30,7 @@ except:
     recommender.build_similarity_matrix()
     recommender.save_model(MODEL_PATH)
 
-# Request model for “similar items”
+
 class ItemRequest(BaseModel):
     item_name: str
     n: int = 5
@@ -63,11 +38,6 @@ class ItemRequest(BaseModel):
 @app.get("/")
 def root():
     return {"message": "Canteen General Recommendation API is running!"}
-
-@app.get("/menu")
-def get_menu():
-    df = pd.read_csv("Data/raw/menu.csv")
-    return df.to_dict(orient="records")
 
 @app.get("/recommend/popular")
 def get_popular_items(limit: int = 10):
@@ -77,7 +47,7 @@ def get_popular_items(limit: int = 10):
         return popular_items.to_dict(orient="records")
     except Exception as e:
         print("\n\n🔥 ERROR TRACEBACK 🔥")
-        traceback.print_exc()  # 👈 This will show the *exact* error line and file in terminal
+        traceback.print_exc()  
         print("🔥 END TRACEBACK 🔥\n\n")
         raise HTTPException(status_code=500, detail=str(e))
 @app.get("/recommend/similar")
