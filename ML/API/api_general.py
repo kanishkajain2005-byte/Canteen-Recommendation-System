@@ -56,6 +56,11 @@ class ItemRequest(BaseModel):
 def root():
     return {"message": "Canteen General Recommendation API is running!"}
 
+@app.get("/menu")
+def get_menu():
+    df = pd.read_csv("Data/raw/menu.csv")
+    return df.to_dict(orient="records")
+
 @app.get("/recommend/popular")
 def get_popular_items(limit: int = 10):
     
