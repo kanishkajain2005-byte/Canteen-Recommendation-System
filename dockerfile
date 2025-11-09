@@ -10,5 +10,7 @@ COPY . .
 
 EXPOSE 10000
 
-EXPOSE 10000
-CMD ["uvicorn", "ML.API.api_general:app", "--host", "0.0.0.0", "--port", "10000"]
+ARG PORT=10000
+ENV PORT=${PORT}
+
+CMD ["sh", "-c", "uvicorn ML.API.api_general:app --host 0.0.0.0 --port ${PORT}"]

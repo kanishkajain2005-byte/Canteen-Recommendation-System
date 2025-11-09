@@ -6,6 +6,8 @@ from typing import List
 import sys, os
 import pandas as pd
 import traceback
+from fastapi.middleware.cors import CORSMiddleware
+
 
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../ML")))
@@ -17,7 +19,13 @@ from ML.Model.general_recommendation import ContentBasedRecommender
 
 app = FastAPI(title="Canteen General Recommendation API")
 
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Go one level up from /API
 DATA_PATH = os.path.join(BASE_DIR, "Data", "raw", "canteen_recommendation_dataset.csv")
 
