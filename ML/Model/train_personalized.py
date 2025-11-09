@@ -7,7 +7,7 @@ import asyncio
 from dotenv import load_dotenv
 from personalized_recommendation import PersonalizedHybridRecommender
 
-# Load environment variables
+
 load_dotenv()
 MONGO_URI = os.getenv("MONGODB_URI")
 MONGO_DB = os.getenv("MONGODB_DB", "canteen")
