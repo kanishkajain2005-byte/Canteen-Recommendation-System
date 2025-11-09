@@ -7,7 +7,7 @@ import pickle
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_PATH = os.path.join(BASE_DIR,"ML", "Data", "raw", "canteen_recommendation_dataset.csv")
+DATA_PATH = os.path.join(BASE_DIR, "Data", "raw", "canteen_recommendation_dataset.csv")
 
 print("📁 BASE_DIR:", BASE_DIR)
 print("📁 DATA_PATH:", DATA_PATH)

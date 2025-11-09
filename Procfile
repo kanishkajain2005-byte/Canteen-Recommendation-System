@@ -1,1 +1,1 @@
-web: uvicorn ML.API.general_recommendation_api:app --host 0.0.0.0 --port 10000
+web: uvicorn ML.API.api_general:app --host 0.0.0.0 --port 10000
